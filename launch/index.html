@@ -3,35 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>$JOBSDONE — Real Business. Real Burns.</title>
+  <title>$JOBS — Real Business. Real Burns.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    /* ── TOKENS ── */
     :root {
       --green: #00ff88;
       --green-dim: rgba(0,255,136,0.12);
       --green-border: rgba(0,255,136,0.25);
-      --purple: #7c3aed;
       --bg: #050505;
       --bg2: #0d0d0d;
       --bg3: #141414;
       --text: #f0f0f0;
       --muted: #666;
-      --ticker: "$JOBSDONE";
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
 
     /* ── NAV ── */
     nav {
@@ -42,456 +31,215 @@
       background: rgba(5,5,5,0.85);
       backdrop-filter: blur(12px);
     }
-
-    .nav-logo {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: var(--text);
-      letter-spacing: -0.02em;
-    }
-
+    .nav-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; letter-spacing: -0.02em; }
     .nav-logo span { color: var(--green); }
-
-    .nav-links {
-      display: flex; align-items: center; gap: 1rem;
-    }
-
-    .btn-ghost {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.8rem;
-      color: var(--muted);
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 6px;
-      transition: all 0.2s;
-    }
+    .nav-links { display: flex; align-items: center; gap: 1rem; }
+    .btn-ghost { font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--muted); text-decoration: none; padding: 0.5rem 1rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; transition: all 0.2s; }
     .btn-ghost:hover { color: var(--text); border-color: rgba(255,255,255,0.25); }
-
-    .btn-green {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: #000;
-      background: var(--green);
-      text-decoration: none;
-      padding: 0.5rem 1.25rem;
-      border-radius: 6px;
-      transition: all 0.2s;
-    }
+    .btn-green { font-family: 'Space Mono', monospace; font-size: 0.8rem; font-weight: 700; color: #000; background: var(--green); text-decoration: none; padding: 0.5rem 1.25rem; border-radius: 6px; transition: all 0.2s; }
     .btn-green:hover { background: #00e07a; transform: translateY(-1px); }
 
     /* ── HERO ── */
     .hero {
       min-height: 100vh;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
-      text-align: center;
-      padding: 6rem 1.5rem 4rem;
-      position: relative;
-      overflow: hidden;
+      text-align: center; padding: 6rem 1.5rem 4rem; position: relative; overflow: hidden;
     }
-
     .hero::before {
-      content: '';
-      position: absolute;
-      top: -30%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 800px;
-      height: 800px;
+      content: ''; position: absolute; top: -30%; left: 50%; transform: translateX(-50%);
+      width: 800px; height: 800px;
       background: radial-gradient(circle, rgba(0,255,136,0.07) 0%, transparent 70%);
       pointer-events: none;
     }
-
     .hero-badge {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.72rem;
-      color: var(--green);
-      border: 1px solid var(--green-border);
-      background: var(--green-dim);
-      padding: 0.35rem 0.9rem;
-      border-radius: 999px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 2rem;
-      display: inline-block;
+      font-family: 'Space Mono', monospace; font-size: 0.72rem; color: var(--green);
+      border: 1px solid var(--green-border); background: var(--green-dim);
+      padding: 0.35rem 0.9rem; border-radius: 999px; letter-spacing: 0.08em;
+      text-transform: uppercase; margin-bottom: 2rem; display: inline-block;
     }
-
     .hero h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2.8rem, 7vw, 6rem);
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      line-height: 1.05;
-      margin-bottom: 1.5rem;
-      max-width: 14ch;
+      font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.8rem, 7vw, 6rem);
+      font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 1.5rem; max-width: 14ch;
     }
-
-    .hero h1 .glow {
-      color: var(--green);
-      text-shadow: 0 0 40px rgba(0,255,136,0.5);
-    }
-
-    .hero-sub {
-      font-size: 1.1rem;
-      color: var(--muted);
-      max-width: 520px;
-      margin: 0 auto 2.5rem;
-      line-height: 1.7;
-    }
-
+    .hero h1 .glow { color: var(--green); text-shadow: 0 0 40px rgba(0,255,136,0.5); }
+    .hero-sub { font-size: 1.1rem; color: var(--muted); max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.7; }
     .hero-sub strong { color: var(--text); }
-
-    .hero-actions {
-      display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;
-      margin-bottom: 4rem;
-    }
-
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 4rem; }
     .btn-primary {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      color: #000;
-      background: var(--green);
-      text-decoration: none;
-      padding: 0.85rem 2rem;
-      border-radius: 8px;
-      transition: all 0.2s;
-      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: 'Space Grotesk', sans-serif; font-size: 1rem; font-weight: 700; color: #000;
+      background: var(--green); text-decoration: none; padding: 0.85rem 2rem; border-radius: 8px;
+      transition: all 0.2s; display: inline-flex; align-items: center; gap: 0.5rem;
     }
     .btn-primary:hover { background: #00e07a; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,255,136,0.3); }
-
     .btn-outline {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--text);
-      text-decoration: none;
-      padding: 0.85rem 2rem;
-      border-radius: 8px;
-      border: 1px solid rgba(255,255,255,0.15);
-      transition: all 0.2s;
+      font-family: 'Space Grotesk', sans-serif; font-size: 1rem; font-weight: 600; color: var(--text);
+      text-decoration: none; padding: 0.85rem 2rem; border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.15); transition: all 0.2s;
       display: inline-flex; align-items: center; gap: 0.5rem;
     }
     .btn-outline:hover { border-color: rgba(255,255,255,0.35); background: rgba(255,255,255,0.04); }
-
     .contract-pill {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.75rem;
-      color: var(--muted);
-      border: 1px solid rgba(255,255,255,0.08);
-      padding: 0.5rem 1.25rem;
-      border-radius: 999px;
-      display: inline-block;
+      font-family: 'Space Mono', monospace; font-size: 0.75rem; color: var(--muted);
+      border: 1px solid rgba(255,255,255,0.08); padding: 0.5rem 1.25rem; border-radius: 999px; display: inline-block;
     }
     .contract-pill span { color: var(--green); }
 
-    /* ── SECTIONS ── */
+    /* ── SHARED ── */
     section { padding: 5rem 1.5rem; }
     .container { max-width: 1000px; margin: 0 auto; }
-
     .section-label {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 1rem;
+      font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--green); margin-bottom: 1rem;
     }
-
-    h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
-      margin-bottom: 1rem;
-    }
-
-    .sub {
-      color: var(--muted);
-      font-size: 1.05rem;
-      max-width: 560px;
-      line-height: 1.7;
-    }
+    h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 1rem; }
+    .sub { color: var(--muted); font-size: 1.05rem; max-width: 560px; line-height: 1.7; }
+    .divider { border: none; border-top: 1px solid rgba(255,255,255,0.05); }
 
     /* ── WHAT WE DO ── */
     .what-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1px;
-      margin-top: 3.5rem;
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 12px;
-      overflow: hidden;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1px; margin-top: 3.5rem; border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; overflow: hidden;
     }
-
-    .what-card {
-      background: var(--bg2);
-      padding: 2rem;
-      transition: background 0.2s;
-    }
+    .what-card { background: var(--bg2); padding: 2rem; transition: background 0.2s; }
     .what-card:hover { background: var(--bg3); }
-
-    .what-icon {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .what-card h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: var(--text);
-    }
-
-    .what-card p {
-      font-size: 0.9rem;
-      color: var(--muted);
-      line-height: 1.6;
-    }
+    .what-icon { font-size: 1.5rem; margin-bottom: 1rem; }
+    .what-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .what-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
 
     /* ── FLYWHEEL ── */
     .flywheel-section { background: var(--bg2); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); }
-
-    .flywheel {
-      margin-top: 3.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      position: relative;
-    }
-
+    .flywheel { margin-top: 3.5rem; display: flex; flex-direction: column; gap: 0; position: relative; }
     .flywheel-step {
-      display: flex;
-      align-items: flex-start;
-      gap: 1.5rem;
-      padding: 1.75rem 2rem;
-      background: var(--bg3);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 10px;
-      margin-bottom: 1rem;
-      position: relative;
-      transition: border-color 0.2s;
+      display: flex; align-items: flex-start; gap: 1.5rem;
+      padding: 1.75rem 2rem; background: var(--bg3); border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 10px; margin-bottom: 1rem; position: relative; transition: border-color 0.2s;
     }
     .flywheel-step:hover { border-color: var(--green-border); }
-
     .flywheel-step:not(:last-child)::after {
-      content: '↓';
-      position: absolute;
-      bottom: -1.4rem;
-      left: 50%;
-      transform: translateX(-50%);
-      color: var(--green);
-      font-size: 1.1rem;
-      z-index: 1;
+      content: '↓'; position: absolute; bottom: -1.4rem; left: 50%; transform: translateX(-50%);
+      color: var(--green); font-size: 1.1rem; z-index: 1;
     }
-
     .step-num {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.75rem;
-      color: var(--green);
-      background: var(--green-dim);
-      border: 1px solid var(--green-border);
-      width: 2rem; height: 2rem;
-      border-radius: 6px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-      margin-top: 0.15rem;
+      font-family: 'Space Mono', monospace; font-size: 0.75rem; color: var(--green);
+      background: var(--green-dim); border: 1px solid var(--green-border);
+      width: 2rem; height: 2rem; border-radius: 6px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.15rem;
     }
+    .step-content h4 { font-family: 'Space Grotesk', sans-serif; font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem; }
+    .step-content p { font-size: 0.88rem; color: var(--muted); }
 
-    .step-content h4 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.25rem;
+    /* ── VERTICAL AGENTS ── */
+    .agents-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem; margin-top: 3.5rem;
     }
-
-    .step-content p {
-      font-size: 0.88rem;
-      color: var(--muted);
+    .agent-card {
+      background: var(--bg2); border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px; padding: 1.75rem; transition: all 0.2s; position: relative; overflow: hidden;
+    }
+    .agent-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: var(--green); opacity: 0; transition: opacity 0.2s;
+    }
+    .agent-card:hover { border-color: var(--green-border); background: var(--bg3); }
+    .agent-card:hover::before { opacity: 1; }
+    .agent-emoji { font-size: 2rem; margin-bottom: 1rem; display: block; }
+    .agent-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text); }
+    .agent-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+    .agent-tag {
+      display: inline-block; margin-top: 1rem;
+      font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--green); background: var(--green-dim);
+      border: 1px solid var(--green-border); padding: 0.2rem 0.55rem; border-radius: 4px;
     }
 
     /* ── TOKENOMICS ── */
     .token-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
-      margin-top: 3.5rem;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1rem; margin-top: 3.5rem;
     }
+    @media (max-width: 580px) { .token-grid { grid-template-columns: 1fr; } }
+    .token-card { background: var(--bg2); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 1.5rem; text-align: center; }
+    .token-label { font-family: 'Space Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
+    .token-value { font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--green); }
+    .token-note { font-size: 0.75rem; color: var(--muted); margin-top: 0.35rem; }
 
-    .token-card {
-      background: var(--bg2);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 10px;
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    .token-label {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.5rem;
-    }
-
-    .token-value {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--green);
-    }
-
-    .token-note {
-      font-size: 0.75rem;
-      color: var(--muted);
-      margin-top: 0.35rem;
-    }
-
-    .burn-callout {
+    /* burn flow visual */
+    .burn-flow {
       margin-top: 2rem;
-      background: var(--green-dim);
-      border: 1px solid var(--green-border);
-      border-radius: 10px;
-      padding: 1.5rem 2rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
+      display: flex; align-items: stretch; gap: 0;
+      border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; overflow: hidden;
+    }
+    .burn-step {
+      flex: 1; padding: 1.5rem 1.25rem; background: var(--bg2);
+      text-align: center; position: relative;
+    }
+    .burn-step:not(:last-child)::after {
+      content: '→'; position: absolute; right: -0.6rem; top: 50%; transform: translateY(-50%);
+      color: var(--green); font-size: 1rem; z-index: 2; font-weight: 700;
+    }
+    .burn-step:not(:last-child) { border-right: 1px solid rgba(255,255,255,0.06); }
+    .burn-step-icon { font-size: 1.4rem; margin-bottom: 0.5rem; display: block; }
+    .burn-step-label { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.25rem; }
+    .burn-step-value { font-family: 'Space Grotesk', sans-serif; font-size: 0.9rem; font-weight: 600; color: var(--text); }
+    @media (max-width: 640px) {
+      .burn-flow { flex-direction: column; }
+      .burn-step:not(:last-child)::after { content: '↓'; right: auto; left: 50%; top: auto; bottom: -0.6rem; transform: translateX(-50%); }
+      .burn-step:not(:last-child) { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
     }
 
-    .burn-callout .burn-icon { font-size: 1.5rem; flex-shrink: 0; }
-
-    .burn-callout h4 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--green);
-      margin-bottom: 0.25rem;
+    /* ── TRACTION ── */
+    .traction-section { background: var(--bg2); border-top: 1px solid rgba(255,255,255,0.05); }
+    .traction-stats {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 3rem;
     }
-
-    .burn-callout p {
-      font-size: 0.88rem;
-      color: rgba(255,255,255,0.6);
-      line-height: 1.6;
+    @media (max-width: 480px) { .traction-stats { grid-template-columns: 1fr; } }
+    .traction-stat {
+      background: var(--bg3); border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px; padding: 2rem; text-align: center;
     }
+    .traction-stat-label { font-family: 'Space Mono', monospace; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.75rem; }
+    .traction-stat-value { font-family: 'Space Grotesk', sans-serif; font-size: 3.5rem; font-weight: 700; letter-spacing: -0.04em; color: var(--green); line-height: 1; }
+    .traction-stat-sub { font-size: 0.78rem; color: var(--muted); margin-top: 0.5rem; }
 
-    /* ── ROADMAP ── */
-    .roadmap {
-      margin-top: 3.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+    /* projection chart */
+    .projection {
+      margin-top: 2.5rem;
+      background: var(--bg3); border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px; padding: 2rem;
     }
-
-    .roadmap-item {
-      display: flex;
-      gap: 1.5rem;
-      align-items: flex-start;
-      padding: 1.5rem;
-      border-radius: 10px;
-      border: 1px solid rgba(255,255,255,0.06);
-      background: var(--bg2);
+    .projection-title {
+      font-family: 'Space Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 1.75rem;
     }
-
-    .roadmap-item.active {
-      border-color: var(--green-border);
-      background: var(--green-dim);
+    .proj-bars { display: flex; align-items: flex-end; gap: 1rem; height: 120px; }
+    .proj-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+    .proj-bar {
+      width: 100%; border-radius: 4px 4px 0 0;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);
+      position: relative; transition: background 0.2s;
     }
-
-    .phase-badge {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.68rem;
-      font-weight: 700;
-      padding: 0.25rem 0.6rem;
-      border-radius: 4px;
-      flex-shrink: 0;
-      margin-top: 0.15rem;
-      background: rgba(255,255,255,0.08);
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
+    .proj-bar.current {
+      background: var(--green-dim); border-color: var(--green-border);
+      box-shadow: 0 0 16px rgba(0,255,136,0.15);
     }
-
-    .roadmap-item.active .phase-badge {
-      background: var(--green);
-      color: #000;
+    .proj-bar.current::after {
+      content: '← now'; position: absolute; top: -1.5rem; left: 50%; transform: translateX(-50%);
+      font-family: 'Space Mono', monospace; font-size: 0.6rem; color: var(--green);
+      white-space: nowrap;
     }
-
-    .roadmap-content h4 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-    }
-
-    .roadmap-content ul {
-      list-style: none;
-      font-size: 0.88rem;
-      color: var(--muted);
-      display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
-    }
-
-    .roadmap-content ul li::before { content: '→ '; color: var(--green); }
+    .proj-clients { font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--text); }
+    .proj-mrr { font-family: 'Space Mono', monospace; font-size: 0.68rem; color: var(--muted); }
 
     /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding: 3rem 1.5rem;
-      text-align: center;
-    }
-
-    .footer-logo {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.02em;
-    }
-
+    footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 3rem 1.5rem; text-align: center; }
+    .footer-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.3rem; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
     .footer-logo span { color: var(--green); }
-
-    .footer-tagline {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-bottom: 1.5rem;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 2rem;
-    }
-
-    .footer-links a {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.8rem;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
+    .footer-tagline { font-size: 0.85rem; color: var(--muted); margin-bottom: 1.5rem; }
+    .footer-links { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
+    .footer-links a { font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: var(--green); }
-
-    .footer-disclaimer {
-      font-size: 0.72rem;
-      color: rgba(255,255,255,0.2);
-      max-width: 500px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-
-    /* ── DIVIDER ── */
-    .divider {
-      border: none;
-      border-top: 1px solid rgba(255,255,255,0.05);
-    }
+    .footer-disclaimer { font-size: 0.72rem; color: rgba(255,255,255,0.2); max-width: 500px; margin: 0 auto; line-height: 1.6; }
 
     @media (max-width: 600px) {
       nav { padding: 1rem; }
@@ -507,7 +255,7 @@
   <div class="nav-logo">Jobs<span>Done</span></div>
   <div class="nav-links">
     <a href="https://x.com/jobs_done_team" class="btn-ghost" target="_blank">𝕏 @jobs_done_team</a>
-    <a href="#tokenomics" class="btn-green">$JOBSDONE ↗</a>
+    <a href="#tokenomics" class="btn-green">$JOBS ↗</a>
   </div>
 </nav>
 
@@ -520,7 +268,7 @@
     <strong>10% of profits → buyback and burn. Every month. Forever.</strong>
   </p>
   <div class="hero-actions">
-    <a href="#buy" class="btn-primary">Buy $JOBSDONE ↗</a>
+    <a href="#buy" class="btn-primary">Buy $JOBS ↗</a>
     <a href="https://x.com/jobs_done_team" target="_blank" class="btn-outline">Follow on 𝕏</a>
   </div>
   <div class="contract-pill">CA: <span>TBA — launching soon</span></div>
@@ -533,7 +281,7 @@
   <div class="container">
     <div class="section-label">// what we actually do</div>
     <h2>An agency with a token.<br>Not a token with a vibe.</h2>
-    <p class="sub">Jobs Done uses AI agents to build websites and full social media presences for local businesses — plumbers, HVAC guys, lawn care — at a fraction of what Wix charges. They pay monthly. Every month.</p>
+    <p class="sub">Jobs Done uses AI agents to build websites and full social media presences for local businesses — plumbers, HVAC guys, lawn care — at a fraction of what traditional agencies charge. They pay monthly. Every month.</p>
 
     <div class="what-grid">
       <div class="what-card">
@@ -548,8 +296,8 @@
       </div>
       <div class="what-card">
         <div class="what-icon">💸</div>
-        <h3>Recurring Revenue</h3>
-        <p>$5–20/month per client. 50 clients = passive income. 500 clients = a real company. Every subscription feeds the burn.</p>
+        <h3>Massive Market</h3>
+        <p>The US local services industry — HVAC, plumbing, lawn care, electrical — is a $500B+ market. Most of it has no real digital presence. Traditional agencies charge $200–800/month and underdeliver. We do more for less.</p>
       </div>
     </div>
   </div>
@@ -574,7 +322,7 @@
         <div class="step-num">2</div>
         <div class="step-content">
           <h4>10% of profits go to buybacks</h4>
-          <p>After month one (we need the capital to scale), 10% of all profits are used to buy $JOBSDONE off the market and burn it permanently.</p>
+          <p>After month one (we need the capital to scale), 10% of all profits are used to buy $JOBS off the market and burn it permanently.</p>
         </div>
       </div>
       <div class="flywheel-step">
@@ -595,38 +343,71 @@
   </div>
 </section>
 
+<!-- VERTICAL AGENTS -->
+<section>
+  <div class="container">
+    <div class="section-label">// specialized agents</div>
+    <h2>An agent for every trade.</h2>
+    <p class="sub">We don't use one generic agent. Each vertical gets a purpose-built AI trained on that industry's language, services, and customer base.</p>
+
+    <div class="agents-grid">
+      <div class="agent-card">
+        <span class="agent-emoji">🌡️</span>
+        <h3>HVAC Agent</h3>
+        <p>Seasonal promotions, filter change reminders, emergency call CTAs, before/after installs. Knows the difference between a heat pump and a furnace.</p>
+        <span class="agent-tag">Live</span>
+      </div>
+      <div class="agent-card">
+        <span class="agent-emoji">⚡</span>
+        <h3>Electrical Agent</h3>
+        <p>Safety-first content, panel upgrade highlights, permit work callouts, residential and commercial split messaging.</p>
+        <span class="agent-tag">Live</span>
+      </div>
+      <div class="agent-card">
+        <span class="agent-emoji">🌿</span>
+        <h3>Lawn Care Agent</h3>
+        <p>Before/after yard transformations, seasonal scheduling content, fertilization reminders, local neighborhood targeting.</p>
+        <span class="agent-tag">Live</span>
+      </div>
+      <div class="agent-card">
+        <span class="agent-emoji">🔩</span>
+        <h3>Plumbing Agent</h3>
+        <p>24/7 emergency availability posts, drain cleaning and water heater content, review generation prompts, license callouts.</p>
+        <span class="agent-tag">Live</span>
+      </div>
+      <div class="agent-card">
+        <span class="agent-emoji">🏗️</span>
+        <h3>General Contractor Agent</h3>
+        <p>Project milestone showcases, material and crew updates, permit progress posts, portfolio-building content for bids.</p>
+        <span class="agent-tag">Live</span>
+      </div>
+      <div class="agent-card">
+        <span class="agent-emoji">⚙️</span>
+        <h3>New Vertical Agent</h3>
+        <p>Rapidly configurable catch-all for emerging verticals. New industries onboarded in days, not months. Expanding continuously.</p>
+        <span class="agent-tag">Expanding</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- TOKENOMICS -->
-<section id="tokenomics">
+<section id="tokenomics" style="background: var(--bg2); border-top: 1px solid rgba(255,255,255,0.05);">
   <div class="container">
     <div class="section-label">// tokenomics</div>
     <h2>Simple. Fair. Deflationary.</h2>
-    <p class="sub">No team allocation nonsense. No insider vesting cliff surprises. Just a clean launch and a burn mechanism backed by actual revenue.</p>
+    <p class="sub">No team allocation nonsense. No insider vesting cliff surprises. A clean launch and a burn mechanism backed by actual recurring revenue.</p>
 
     <div class="token-grid">
       <div class="token-card">
         <div class="token-label">Ticker</div>
-        <div class="token-value">$JOBSDONE</div>
-        <div class="token-note">easy to change, we know</div>
-      </div>
-      <div class="token-card">
-        <div class="token-label">Launch Type</div>
-        <div class="token-value">Fair</div>
-        <div class="token-note">no presale, no VC bags</div>
+        <div class="token-value">$JOBS</div>
+        <div class="token-note">4 chars. searchable.</div>
       </div>
       <div class="token-card">
         <div class="token-label">Burn Rate</div>
         <div class="token-value">10%</div>
         <div class="token-note">of profits, post month 1</div>
-      </div>
-      <div class="token-card">
-        <div class="token-label">Supply</div>
-        <div class="token-value">TBA</div>
-        <div class="token-note">announced at launch</div>
-      </div>
-      <div class="token-card">
-        <div class="token-label">Chain</div>
-        <div class="token-value">TBA</div>
-        <div class="token-note">announcement soon</div>
       </div>
       <div class="token-card">
         <div class="token-label">Contract</div>
@@ -635,69 +416,82 @@
       </div>
     </div>
 
-    <div class="burn-callout">
-      <div class="burn-icon">🔥</div>
-      <div>
-        <h4>The Burn Mechanic — Plainly Stated</h4>
-        <p>Month one: all fees stay in the company to fund operations and onboard clients fast. From month two onward, 10% of every dollar of profit buys $JOBSDONE on the open market and burns it. Transparent. On-chain. Verifiable. That's the deal.</p>
+    <!-- Burn flow visual -->
+    <div class="burn-flow">
+      <div class="burn-step">
+        <span class="burn-step-icon">🏢</span>
+        <div class="burn-step-label">Monthly Revenue</div>
+        <div class="burn-step-value">Clients pay</div>
+      </div>
+      <div class="burn-step">
+        <span class="burn-step-icon">📊</span>
+        <div class="burn-step-label">10% of Profits</div>
+        <div class="burn-step-value">Allocated</div>
+      </div>
+      <div class="burn-step">
+        <span class="burn-step-icon">💱</span>
+        <div class="burn-step-label">Buy $JOBS</div>
+        <div class="burn-step-value">Open market</div>
+      </div>
+      <div class="burn-step">
+        <span class="burn-step-icon">🔥</span>
+        <div class="burn-step-label">Burn Forever</div>
+        <div class="burn-step-value">Gone. Always.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ROADMAP -->
-<section style="background: var(--bg2); border-top: 1px solid rgba(255,255,255,0.05);">
+<!-- TRACTION -->
+<section class="traction-section">
   <div class="container">
-    <div class="section-label">// roadmap</div>
-    <h2>Where we're going.</h2>
-    <p class="sub">No whitepaper fluff. Just what we're actually building and when.</p>
+    <div class="section-label">// traction</div>
+    <h2>Building in public.</h2>
+    <p class="sub">Updated as we grow. No projections dressed up as progress — just the number.</p>
 
-    <div class="roadmap">
-      <div class="roadmap-item active">
-        <div class="phase-badge">Now</div>
-        <div class="roadmap-content">
-          <h4>Phase 1 — Launch</h4>
-          <ul>
-            <li>Token launch + liquidity</li>
-            <li>First client onboardings live</li>
-            <li>GitHub org and agent infrastructure running</li>
-            <li>Website + social presence established</li>
-          </ul>
-        </div>
+    <div class="traction-stats">
+      <div class="traction-stat">
+        <div class="traction-stat-label">Active Clients</div>
+        <!-- UPDATE THIS NUMBER as clients onboard -->
+        <div class="traction-stat-value">0</div>
+        <div class="traction-stat-sub">live paying accounts</div>
       </div>
-      <div class="roadmap-item">
-        <div class="phase-badge">Next</div>
-        <div class="roadmap-content">
-          <h4>Phase 2 — First 50 Clients</h4>
-          <ul>
-            <li>50 paying small business clients onboarded</li>
-            <li>Burn mechanic goes live (month 2)</li>
-            <li>First on-chain burn transaction published</li>
-            <li>Client dashboard and portal live</li>
-          </ul>
-        </div>
+      <div class="traction-stat">
+        <div class="traction-stat-label">Monthly Recurring Revenue</div>
+        <!-- UPDATE THIS NUMBER as MRR grows -->
+        <div class="traction-stat-value">$0</div>
+        <div class="traction-stat-sub">feeding the burn</div>
       </div>
-      <div class="roadmap-item">
-        <div class="phase-badge">Soon</div>
-        <div class="roadmap-content">
-          <h4>Phase 3 — Scale</h4>
-          <ul>
-            <li>500+ clients</li>
-            <li>Expanded AI agent capabilities</li>
-            <li>Full cross-posting automation</li>
-            <li>Accelerated burns as margin expands</li>
-          </ul>
+    </div>
+
+    <!-- Projection chart -->
+    <div class="projection">
+      <div class="projection-title">// milestone targets</div>
+      <div class="proj-bars">
+        <div class="proj-col">
+          <div class="proj-bar current" style="height: 15px;"></div>
+          <div class="proj-clients">0</div>
+          <div class="proj-mrr">$0/mo</div>
         </div>
-      </div>
-      <div class="roadmap-item">
-        <div class="phase-badge">Later</div>
-        <div class="roadmap-content">
-          <h4>Phase 4 — Token Utility</h4>
-          <ul>
-            <li>Token holders get early access to new features</li>
-            <li>Community governance on service expansion</li>
-            <li>Revenue reporting dashboard (on-chain)</li>
-          </ul>
+        <div class="proj-col">
+          <div class="proj-bar" style="height: 30px;"></div>
+          <div class="proj-clients">10</div>
+          <div class="proj-mrr">$1k/mo</div>
+        </div>
+        <div class="proj-col">
+          <div class="proj-bar" style="height: 55px;"></div>
+          <div class="proj-clients">50</div>
+          <div class="proj-mrr">$5k/mo</div>
+        </div>
+        <div class="proj-col">
+          <div class="proj-bar" style="height: 80px;"></div>
+          <div class="proj-clients">100</div>
+          <div class="proj-mrr">$12k/mo</div>
+        </div>
+        <div class="proj-col">
+          <div class="proj-bar" style="height: 120px;"></div>
+          <div class="proj-clients">500</div>
+          <div class="proj-mrr">$60k/mo</div>
         </div>
       </div>
     </div>
@@ -707,7 +501,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">Jobs<span>Done</span></div>
-  <p class="footer-tagline">AI Agency. Real Revenue. Deflationary Token.</p>
+  <p class="footer-tagline">AI Agency. Real Revenue. $JOBS burns forever.</p>
   <div class="footer-links">
     <a href="https://x.com/jobs_done_team" target="_blank">𝕏 @jobs_done_team</a>
     <a href="https://github.com/jobsdoneteam" target="_blank">GitHub</a>
