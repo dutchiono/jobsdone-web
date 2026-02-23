@@ -2,7 +2,7 @@ name: Deploy to Server
 
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 jobs:
   deploy:
@@ -19,5 +19,5 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             cd /var/www/jobsdone
-            git pull origin main
+            git pull origin master
             echo "Deployed at $(date)"
