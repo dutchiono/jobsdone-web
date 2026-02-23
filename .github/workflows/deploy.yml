@@ -1,4 +1,4 @@
-name: Deploy to Server
+name: Build and Deploy
 
 on:
   push:
@@ -6,11 +6,23 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build with Vite
+        run: npm run build
 
       - name: Deploy to server
         uses: appleboy/ssh-action@v1.0.0
@@ -20,5 +32,7 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             cd /var/www/jobsdone
-            git pull origin master
+            git pull origin main
+            npm ci
+            npm run build
             echo "Deployed at $(date)"

@@ -1,0 +1,25 @@
+{
+  "name": "jobsdone-web",
+  "version": "1.0.0",
+  "description": "Static site for jobsdone.team",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jobsdoneteam/jobsdone-web.git"
+  },
+  "keywords": [],
+  "author": "MXJXN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jobsdoneteam/jobsdone-web/issues"
+  },
+  "homepage": "https://github.com/jobsdoneteam/jobsdone-web#readme",
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
+}
