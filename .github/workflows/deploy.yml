@@ -1,0 +1,27 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 198.71.54.203
+          username: team
+          password: ${{ secrets.SERVER_PASSWORD }}
+          script: |
+            cd /var/www/jobsdone || (mkdir -p /var/www/jobsdone && cd /var/www/jobsdone)
+            if [ ! -d .git ]; then
+              git clone https://github.com/${{ secrets.GITHUB_ORG }}/jobsdone-web .
+            else
+              git pull origin main
+            fi
+            echo "Deployed at $(date)"
