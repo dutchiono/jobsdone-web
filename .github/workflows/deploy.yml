@@ -14,14 +14,10 @@ jobs:
       - name: Deploy to server
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: 198.71.54.203
-          username: team
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            cd /var/www/jobsdone || (mkdir -p /var/www/jobsdone && cd /var/www/jobsdone)
-            if [ ! -d .git ]; then
-              git clone https://github.com/${{ secrets.GITHUB_ORG }}/jobsdone-web .
-            else
-              git pull origin main
-            fi
+            cd /var/www/jobsdone
+            git pull origin main
             echo "Deployed at $(date)"
