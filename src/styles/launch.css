@@ -16,12 +16,20 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
 /* ── NAV ── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 1.25rem 2rem;
+  display: flex;
+  flex-direction: column;
   border-bottom: 1px solid rgba(255,255,255,0.06);
   background: rgba(5,5,5,0.85);
   backdrop-filter: blur(12px);
 }
+
+.nav-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2rem;
+}
+
 .nav-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; letter-spacing: -0.02em; }
 .nav-logo span { color: var(--green); }
 .nav-links { display: flex; align-items: center; gap: 1rem; }
@@ -233,7 +241,7 @@ footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 3rem 1.5rem; tex
 .footer-disclaimer { font-size: 0.72rem; color: rgba(255,255,255,0.2); max-width: 500px; margin: 0 auto; line-height: 1.6; }
 
 @media (max-width: 600px) {
-  nav { padding: 1rem; }
+  .nav-top { padding: 1rem; }
   .hero h1 { font-size: 2.4rem; }
   .flywheel-step { padding: 1.25rem; }
 }

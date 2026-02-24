@@ -1,0 +1,140 @@
+/* Ticker Styles */
+.ticker-wrap {
+  position: relative;
+  overflow: hidden;
+  background: var(--ticker-bg, #0a0a0a);
+  padding: 0.5rem 0;
+}
+
+.ticker-track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  color: var(--ticker-color, #f0f0f0);
+  flex-shrink: 0;
+}
+
+.ticker-item:last-child {
+  border-right: none;
+}
+
+.ticker-icon {
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* Price Type */
+.ticker-price {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.ticker-change {
+  font-size: 0.7rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  margin-left: 0.4rem;
+}
+
+.ticker-change.positive {
+  background: rgba(0,255,136,0.15);
+  color: var(--ticker-accent, #00ff88);
+}
+
+.ticker-change.negative {
+  background: rgba(239,68,68,0.15);
+  color: var(--ticker-accent, #ef4444);
+}
+
+/* Quote Type */
+.ticker-quote {
+  color: rgba(255,255,255,0.85);
+  font-style: italic;
+}
+
+/* Alert Type */
+.ticker-alert {
+  color: var(--ticker-accent, #fbbf24);
+  font-weight: 700;
+}
+
+/* Stat Type */
+.ticker-stat-label {
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+
+.ticker-stat-value {
+  color: #fff;
+  font-weight: 700;
+}
+
+/* News Type */
+.ticker-news {
+  color: rgba(255,255,255,0.9);
+  font-size: 0.73rem;
+}
+
+/* Status Type */
+.ticker-status {
+  color: var(--ticker-accent, #00ff88);
+}
+
+/* Ticker Color Themes */
+.ticker-green {
+  --ticker-color: #00ff88;
+  --ticker-bg: #0a1a0f;
+  --ticker-accent: #00cc6a;
+}
+
+.ticker-orange {
+  --ticker-color: #fbbf24;
+  --ticker-bg: #1a1200;
+  --ticker-accent: #f59e0b;
+}
+
+.ticker-blue {
+  --ticker-color: #3b82f6;
+  --ticker-bg: #000d1a;
+  --ticker-accent: #2563eb;
+}
+
+.ticker-purple {
+  --ticker-color: #a855f7;
+  --ticker-bg: #1a001a;
+  --ticker-accent: #9333ea;
+}
+
+.ticker-red {
+  --ticker-color: #ef4444;
+  --ticker-bg: #1a0000;
+  --ticker-accent: #dc2626;
+}
+
+.ticker-dark {
+  --ticker-color: #f0f0f0;
+  --ticker-bg: #0a0a0a;
+  --ticker-accent: #00ff88;
+}
+
+@media (max-width: 640px) {
+  .ticker-item {
+    padding: 0.4rem 1rem;
+    font-size: 0.7rem;
+  }
+}

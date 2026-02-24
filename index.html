@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/src/styles/launch.css">
+  <link rel="stylesheet" href="/src/styles/ticker.css">
 </head>
 <body>
 
@@ -22,11 +23,14 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">Jobs<span>Done</span></div>
-  <div class="nav-links">
-    <a href="https://x.com/jobs_done_team" class="btn-ghost" target="_blank">𝕏 @jobs_done_team</a>
-    <a href="#tokenomics" class="btn-green">$JOBS ↗</a>
+  <div class="nav-top">
+    <div class="nav-logo">Jobs<span>Done</span></div>
+    <div class="nav-links">
+      <a href="https://x.com/jobs_done_team" class="btn-ghost" target="_blank">𝕏 @jobs_done_team</a>
+      <a href="#tokenomics" class="btn-green">$JOBS ↗</a>
+    </div>
   </div>
+	<!-- <div id="ticker-container"></div> -->
 </nav>
 
 <!-- HERO -->
@@ -300,6 +304,8 @@
   </div>
   <p class="footer-disclaimer">Not financial advice. This is a utility token tied to a real business. Do your own research. We're building in public.</p>
 </footer>
+
+<script type="module" src="/src/main.js"></script>
 
 </body>
 </html>
