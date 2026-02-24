@@ -158,10 +158,45 @@ h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.8rem, 4vw, 2.8
   gap: 1rem; margin-top: 3.5rem;
 }
 @media (max-width: 580px) { .token-grid { grid-template-columns: 1fr; } }
-.token-card { background: var(--bg2); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 1.5rem; text-align: center; }
-.token-label { font-family: 'Space Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
-.token-value { font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--green); }
-.token-note { font-size: 0.75rem; color: var(--muted); margin-top: 0.35rem; }
+.token-card {
+  background: var(--bg2);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.token-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+.token-value {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--green);
+  margin-bottom: 0.35rem;
+}
+.token-note {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.token-link {
+  color: rgba(102, 102, 102, 0.8);
+  text-decoration: none;
+  transition: color 0.2s, text-decoration 0.2s;
+}
+.token-link:hover {
+  color: rgba(102, 102, 102, 0.5);
+  text-decoration: underline;
+  text-decoration-color: rgba(102, 102, 102, 0.3);
+  text-underline-offset: 3px;
+}
 
 /* burn flow visual */
 .burn-flow {
