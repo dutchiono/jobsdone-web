@@ -138,3 +138,31 @@
     font-size: 0.7rem;
   }
 }
+
+/* Ticker in Nav context */
+.nav-ticker .ticker-item {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.68rem;
+}
+
+.nav-ticker .ticker-icon {
+  font-size: 0.75rem;
+}
+
+.nav-ticker .ticker-price,
+.nav-ticker .ticker-quote,
+.nav-ticker .ticker-alert,
+.nav-ticker .ticker-stat-value,
+.nav-ticker .ticker-news,
+.nav-ticker .ticker-status {
+  font-size: 0.7rem;
+}
+
+.nav-ticker .ticker-change {
+  font-size: 0.6rem;
+  padding: 0.1rem 0.3rem;
+}
+
+.nav-ticker .ticker-stat-label {
+  font-size: 0.58rem;
+}
