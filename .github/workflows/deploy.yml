@@ -32,6 +32,7 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             cd /var/www/jobsdone
+            git remote set-url origin https://github.com/jobsdoneteam/jobsdone-web.git
             git pull origin master
             npm ci
             npm run build
