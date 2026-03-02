@@ -3,153 +3,248 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jobs Done — We Handle the Internet Stuff</title>
+  <title>Jobs Done — We Upgrade Your Business</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/src/styles/onboard-v2.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}body{font-family:'Inter',sans-serif;color:#0f172a;background:#fff}
+    :root{--green:#16a34a;--green-light:#dcfce7;--dark:#0f172a;--muted:#64748b;--border:#e2e8f0;--bg2:#f8fafc}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.5rem;background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+    .nav-logo{font-size:1.15rem;font-weight:800;color:var(--dark);letter-spacing:-0.03em}.nav-logo span{color:var(--green)}
+    .nav-cta{background:var(--dark);color:#fff;font-weight:700;font-size:0.85rem;text-decoration:none;padding:0.55rem 1.15rem;border-radius:8px}
+    .hero{background:var(--dark);color:#fff;padding:5rem 1.5rem 4rem;text-align:center}
+    .hero-tag{display:inline-block;background:rgba(22,163,74,0.2);color:#4ade80;border:1px solid rgba(74,222,128,0.3);border-radius:999px;padding:0.4rem 1rem;font-size:0.8rem;font-weight:600;letter-spacing:0.04em;margin-bottom:1.5rem}
+    .hero h1{font-size:clamp(2.4rem,6vw,4rem);font-weight:800;letter-spacing:-0.04em;line-height:1.05;margin-bottom:1.5rem}
+    .hero h1 em{font-style:normal;color:#4ade80}
+    .hero>p{font-size:1.15rem;color:rgba(255,255,255,0.7);max-width:600px;margin:0 auto 2rem;line-height:1.7}
+    .hero-btn{display:inline-block;background:#16a34a;color:#fff;font-weight:700;font-size:1.05rem;text-decoration:none;padding:1rem 2.25rem;border-radius:10px}
+    .hero-sub{margin-top:1rem;font-size:0.85rem;color:rgba(255,255,255,0.4)}
+    .sec{padding:5rem 1.5rem}.sec.alt{background:var(--bg2)}.sec.dark{background:var(--dark);color:#fff}
+    .inner{max-width:920px;margin:0 auto}.inner-sm{max-width:780px;margin:0 auto}.inner-md{max-width:860px;margin:0 auto}
+    .label{font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--green);margin-bottom:0.75rem}
+    h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:1rem}
+    .sub{font-size:1.05rem;color:var(--muted);max-width:580px;margin-bottom:3rem;line-height:1.7}
+    .grid6{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
+    .card{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.75rem}
+    .sec.alt .card{background:#fff}.card:hover{border-color:#86efac}
+    .card-icon{font-size:1.75rem;margin-bottom:0.75rem}
+    .card h3{font-size:1.05rem;font-weight:700;color:var(--dark);margin-bottom:0.5rem}
+    .card p{font-size:0.88rem;color:var(--muted);line-height:1.6}
+    .ex-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem}
+    .ex-card{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.5rem}
+    .ex-tag{display:inline-block;background:var(--green-light);color:var(--green);font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;border-radius:999px;padding:0.25rem 0.75rem;margin-bottom:1rem}
+    .ex-card h3{font-size:1rem;font-weight:700;color:var(--dark);margin-bottom:0.5rem}
+    .ex-card p{font-size:0.85rem;color:var(--muted);line-height:1.6}
+    .steps-list{display:grid;gap:1.5rem}
+    .step{display:flex;gap:1.25rem;align-items:flex-start;padding:1.5rem;background:var(--bg2);border:1.5px solid var(--border);border-radius:14px}
+    .step-n{flex-shrink:0;width:2.25rem;height:2.25rem;background:var(--dark);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.9rem}
+    .step h3{font-size:1rem;font-weight:700;color:var(--dark);margin-bottom:0.35rem}
+    .step p{font-size:0.87rem;color:var(--muted);line-height:1.6}
+    .p-hdr{text-align:center;margin-bottom:3rem}.p-hdr p{color:var(--muted)}
+    .p-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+    .pc{background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:2rem;display:flex;flex-direction:column;position:relative}
+    .pc.feat{border-color:var(--green);box-shadow:0 0 0 4px rgba(22,163,74,0.08)}
+    .p-badge{position:absolute;top:-0.6rem;left:1.5rem;background:var(--green);color:#fff;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:0.25rem 0.75rem;border-radius:999px}
+    .p-tier{font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:0.5rem}
+    .p-price{font-size:2.5rem;font-weight:800;color:var(--dark);letter-spacing:-0.04em;margin-bottom:0.25rem}
+    .p-price span{font-size:1rem;font-weight:500;color:var(--muted)}
+    .p-desc{font-size:0.85rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.5}
+    .p-feats{list-style:none;padding:0;margin:0 0 2rem;display:flex;flex-direction:column;gap:0.6rem;flex:1}
+    .p-feats li{font-size:0.88rem;color:#374151;display:flex;align-items:flex-start;gap:0.5rem;line-height:1.5}
+    .ck{color:var(--green);font-weight:700;flex-shrink:0}
+    .p-cta{display:block;text-align:center;background:var(--dark);color:#fff;font-weight:700;font-size:0.95rem;text-decoration:none;padding:0.85rem 1.5rem;border-radius:10px;margin-top:auto}
+    .pc.feat .p-cta{background:var(--green)}
+    .p-note{text-align:center;font-size:0.85rem;color:var(--muted);margin-top:1.25rem}
+    .p-note strong{color:var(--dark)}
+    .cust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-bottom:3rem;text-align:left}
+    .ci{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1.25rem}
+    .ci-icon{font-size:1.4rem;margin-bottom:0.5rem}
+    .ci h3{font-size:0.9rem;font-weight:700;color:#fff;margin-bottom:0.25rem}
+    .ci p{font-size:0.8rem;color:rgba(255,255,255,0.5);line-height:1.5}
+    .cust-cta{display:inline-block;background:#4ade80;color:#0f172a;font-weight:800;font-size:1.05rem;text-decoration:none;padding:1rem 2.25rem;border-radius:10px}
+    .cust-sub{margin-top:1rem;font-size:0.85rem;color:rgba(255,255,255,0.35)}
+    .t-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;text-align:left;margin-top:3rem}
+    .tc{background:var(--bg2);border:1.5px solid var(--border);border-radius:14px;padding:1.5rem}
+    .tc p{font-size:0.9rem;color:#374151;line-height:1.65;margin-bottom:1rem;font-style:italic}
+    .tc-auth{font-size:0.82rem;font-weight:700;color:var(--muted)}
+    .faq-list{display:flex;flex-direction:column;gap:1rem;margin-top:2.5rem}
+    .fi{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem}
+    .fi h3{font-size:0.95rem;font-weight:700;color:var(--dark);margin-bottom:0.5rem}
+    .fi p{font-size:0.87rem;color:var(--muted);line-height:1.6}
+    .cta-sec{padding:5rem 1.5rem;background:#fff;text-align:center}
+    .cta-sec p{font-size:1rem;color:var(--muted);max-width:480px;margin:0 auto 2rem;line-height:1.7}
+    footer{background:var(--dark);color:rgba(255,255,255,0.5);padding:2.5rem 1.5rem;text-align:center}
+    .f-logo{font-size:1.2rem;font-weight:800;color:#fff;margin-bottom:1rem}.f-logo span{color:#4ade80}
+    .f-links{display:flex;justify-content:center;gap:1.5rem;margin-bottom:1rem}
+    .f-links a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.85rem}
+    .f-copy{font-size:0.78rem}
+  </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo">Jobs<span>Done</span></div>
-  <a href="#get-started" class="nav-cta">See Pricing →</a>
+  <a href="#pricing" class="nav-cta">See Pricing &#x2197;</a>
 </nav>
 
-<!-- HERO -->
-<section style="max-width: 900px; margin: 0 auto; padding: 5rem 1.5rem 4rem;">
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-    <div>
-      <h1 style="font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1.08; margin-bottom: 1.25rem;">
-        More calls.<br><em style="font-style:normal; color: var(--orange); text-decoration: underline; text-decoration-color: var(--yellow); text-decoration-thickness: 3px; text-underline-offset: 4px;">Less hassle.</em>
-      </h1>
-      <p style="font-size: 1.05rem; color: var(--muted); margin-bottom: 2rem; line-height: 1.7;">
-        We build your website, set up your social media, and keep it all running. You take the job. We make sure customers can find you.
-      </p>
-      <a href="#get-started" style="display:inline-flex; align-items:center; gap:0.5rem; background: var(--dark); color: var(--bg); font-weight: 700; font-size: 1rem; text-decoration: none; padding: 0.9rem 2rem; border-radius: 10px; transition: all 0.2s; border: 2px solid var(--dark);">See Plans →</a>
-      <span style="display:block; margin-top: 0.85rem; font-size: 0.85rem; color: var(--muted);">Plans from $97/month. No contracts. No tech knowledge needed.</span>
-    </div>
+<div class="hero">
+  <div class="hero-tag">&#x2713; Local service businesses &nbsp;&middot;&nbsp; No contracts &nbsp;&middot;&nbsp; 48-hour setup</div>
+  <h1>We upgrade<br><em>your entire business.</em></h1>
+  <p>Website. Social media. Google. Automations. Custom dashboards. AI agents. Whatever your business needs to run better &mdash; we build it, manage it, and keep it running. You just do the work.</p>
+  <a href="#pricing" class="hero-btn">See What We Can Do &#x2197;</a>
+  <p class="hero-sub">Plans from $97/month. No tech knowledge needed. Cancel anytime.</p>
+</div>
 
-    <!-- Mock visual -->
-    <div style="background: var(--bg2); border: 2px solid var(--dark); border-radius: 16px; padding: 1.5rem;">
-      <div style="background: #fff; border: 1.5px solid var(--border); border-radius: 10px; padding: 1rem; margin-bottom: 0.75rem;">
-        <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
-          <div style="width:2rem; height:2rem; background: var(--orange); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.8rem; color:#fff; font-weight:700;">M</div>
-          <div>
-            <div style="font-weight:700; font-size:0.82rem;">Mark's Lawn Care</div>
-            <div style="font-size:0.72rem; color:var(--muted);">@markslawncare</div>
-          </div>
-        </div>
-        <div style="background: var(--bg2); border-radius: 6px; height: 70px; display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin-bottom:0.5rem;">🌿</div>
-        <div style="font-size:0.78rem; color:var(--muted);">Fresh cut in Riverside today. Free estimates — call or DM!</div>
-        <div style="display:flex; gap:0.4rem; flex-wrap:wrap; margin-top:0.6rem;">
-          <span style="font-size:0.65rem; font-weight:700; padding:0.2rem 0.45rem; border-radius:4px; background:var(--dark); color:var(--bg);">Facebook ✓</span>
-          <span style="font-size:0.65rem; font-weight:700; padding:0.2rem 0.45rem; border-radius:4px; background:var(--dark); color:var(--bg);">Instagram ✓</span>
-          <span style="font-size:0.65rem; font-weight:700; padding:0.2rem 0.45rem; border-radius:4px; background:var(--dark); color:var(--bg);">TikTok ✓</span>
-        </div>
-        <div style="font-size:0.72rem; color:var(--orange); font-weight:700; margin-top:0.5rem;">✓ Posted everywhere automatically</div>
-      </div>
-      <p style="font-size:0.78rem; color:var(--muted); text-align:center;">Mark posted once. We did the rest.</p>
+<div class="sec">
+  <div class="inner">
+    <div class="label">// what we do</div>
+    <h2>Not just a website.<br>Your whole backoffice.</h2>
+    <p class="sub">Most agencies stop at &ldquo;get you online.&rdquo; We go further &mdash; we handle every part of your business that you don&rsquo;t have time to figure out yourself.</p>
+    <div class="grid6">
+      <div class="card"><div class="card-icon">&#x1F310;</div><h3>Website &amp; Online Presence</h3><p>Professional website, Google Business, all social platforms &mdash; built, branded, and live in 48 hours.</p></div>
+      <div class="card"><div class="card-icon">&#x2699;&#xFE0F;</div><h3>Business Automations</h3><p>Lead follow-up, review requests, appointment reminders, invoice tracking &mdash; automated so nothing falls through the cracks.</p></div>
+      <div class="card"><div class="card-icon">&#x1F4CA;</div><h3>Custom Dashboards</h3><p>See your jobs, revenue, leads, and reviews in one place. Built exactly for how you run your business.</p></div>
+      <div class="card"><div class="card-icon">&#x1F916;</div><h3>AI Agents</h3><p>AI that answers inquiries, books jobs, and follows up &mdash; while you&rsquo;re out on the job.</p></div>
+      <div class="card"><div class="card-icon">&#x1F4F1;</div><h3>Social &amp; Content</h3><p>Post once, it goes everywhere. Or let us handle the whole thing &mdash; photos, captions, scheduling, all of it.</p></div>
+      <div class="card"><div class="card-icon">&#x1F527;</div><h3>Whatever You Need</h3><p>Estimate tools, job tracking, customer portals, team scheduling &mdash; if it helps your business, we can build it.</p></div>
     </div>
-  </div>
-</section>
-
-<!-- BELT -->
-<div class="belt">
-  <div class="belt-track">
-    <span>✓ Your Website</span>
-    <span>✓ Google Business</span>
-    <span>✓ Facebook</span>
-    <span>✓ Instagram</span>
-    <span>✓ TikTok</span>
-    <span>✓ Yelp</span>
-    <span>✓ Auto Cross-Posting</span>
-    <span>✓ No Tech Skills Needed</span>
-    <span>✓ Your Website</span>
-    <span>✓ Google Business</span>
-    <span>✓ Facebook</span>
-    <span>✓ Instagram</span>
-    <span>✓ TikTok</span>
-    <span>✓ Yelp</span>
-    <span>✓ Auto Cross-Posting</span>
-    <span>✓ No Tech Skills Needed</span>
   </div>
 </div>
 
-<!-- PRICING -->
-<section id="get-started" style="max-width: 900px; margin: 0 auto; padding: 5rem 1.5rem;">
-  <div style="text-align:center; margin-bottom: 3rem;">
-    <h2 style="font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; letter-spacing: -0.04em;">Simple pricing for local businesses.</h2>
-    <p style="color: var(--muted); font-size: 1rem; margin-top: 0.75rem;">No setup fees. No long-term contracts. Cancel anytime.</p>
+<div class="sec alt">
+  <div class="inner">
+    <div class="label">// real examples</div>
+    <h2>Here&rsquo;s what this looks like<br>for real businesses.</h2>
+    <p class="sub">Every business is different. Here&rsquo;s the kind of work we do for contractors and service businesses like yours.</p>
+    <div class="ex-grid">
+      <div class="ex-card"><div class="ex-tag">HVAC Contractor</div><h3>Lead-to-booked in 5 minutes</h3><p>New inquiry comes in from Google. AI agent responds instantly, qualifies the job, and books the estimate &mdash; no phone tag, no missed leads.</p></div>
+      <div class="ex-card"><div class="ex-tag">Lawn Care</div><h3>Customer reviews on autopilot</h3><p>Job finishes, customer gets a text asking for a Google review. 47 reviews in 3 months. Jumps from page 3 to the top of local results.</p></div>
+      <div class="ex-card"><div class="ex-tag">Electrician</div><h3>Job dashboard, no more spreadsheets</h3><p>Custom dashboard shows all open jobs, invoices, and customer history. Owner knows exactly where everything stands from his phone.</p></div>
+      <div class="ex-card"><div class="ex-tag">Plumber</div><h3>Social posted without thinking about it</h3><p>Snaps a photo of a finished job. One text to us. We write the caption and post it to Facebook, Instagram, and Google &mdash; done.</p></div>
+      <div class="ex-card"><div class="ex-tag">Cleaning Company</div><h3>Recurring payment, zero invoicing</h3><p>All recurring clients on auto-pay. Automated invoice + reminder if card fails. Owner stopped chasing payments entirely.</p></div>
+      <div class="ex-card"><div class="ex-tag">Roofer</div><h3>Estimate tool on the website</h3><p>Customers fill in their details. Get a ballpark estimate instantly. Owner gets a hot lead with all the info ready.</p></div>
+    </div>
   </div>
+</div>
 
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; align-items: start;">
-
-    <!-- Starter -->
-    <div style="border: 2px solid var(--border); border-radius: 16px; padding: 2rem; background: var(--bg);">
-      <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 0.5rem;">Starter</div>
-      <div style="font-size: 2.8rem; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 0.25rem;">$97<span style="font-size: 1rem; font-weight: 500; color: var(--muted);">/mo</span></div>
-      <p style="font-size: 0.88rem; color: var(--muted); margin-bottom: 1.5rem; line-height: 1.5;">Website + Google Business + 1 social platform. The essentials to get found.</p>
-      <ul style="list-style: none; padding: 0; margin: 0 0 2rem 0; font-size: 0.88rem; display: flex; flex-direction: column; gap: 0.5rem;">
-        <li>✓ Custom website</li>
-        <li>✓ Google Business Profile</li>
-        <li>✓ 1 social platform</li>
-        <li>✓ We handle all the tech</li>
-        <li>✓ Monthly updates</li>
-      </ul>
-      <a href="mailto:jobsdoneteam@gmail.com?subject=Starter Plan — $97/mo" style="display:block; text-align:center; background: var(--dark); color: var(--bg); font-weight: 700; padding: 0.85rem; border-radius: 10px; text-decoration: none; font-size: 0.9rem;">Get Started →</a>
+<div class="sec">
+  <div class="inner-sm">
+    <div style="text-align:center;margin-bottom:3rem"><h2>Simple to get started.</h2><p style="color:var(--muted)">You don&rsquo;t need to know anything about tech. We figure it all out for you.</p></div>
+    <div class="steps-list">
+      <div class="step"><div class="step-n">1</div><div><h3>Tell us about your business</h3><p>Email us or fill out a short form. Tell us what you do, where you work, and what&rsquo;s frustrating you most. Takes 5 minutes.</p></div></div>
+      <div class="step"><div class="step-n">2</div><div><h3>We put together a plan</h3><p>We figure out what you actually need &mdash; not a one-size-fits-all package, but exactly what will make a difference for your business right now.</p></div></div>
+      <div class="step"><div class="step-n">3</div><div><h3>We build it, you approve it</h3><p>48 hours for the core setup. We show you everything before it goes live. You give the green light, we flip the switch.</p></div></div>
+      <div class="step"><div class="step-n">4</div><div><h3>We keep it running</h3><p>Monthly updates, content, monitoring, and improvements. Your business keeps growing &mdash; we keep everything working.</p></div></div>
     </div>
-
-    <!-- Pro -->
-    <div style="border: 2px solid var(--dark); border-radius: 16px; padding: 2rem; background: var(--dark); color: #fff; position: relative;">
-      <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--orange); color: #fff; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.25rem 0.75rem; border-radius: 20px; white-space: nowrap;">Most Popular</div>
-      <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; margin-bottom: 0.5rem;">Pro</div>
-      <div style="font-size: 2.8rem; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 0.25rem;">$197<span style="font-size: 1rem; font-weight: 500; color: #94a3b8;">/mo</span></div>
-      <p style="font-size: 0.88rem; color: #94a3b8; margin-bottom: 1.5rem; line-height: 1.5;">All 5 platforms + automatic cross-posting. Post once, go everywhere.</p>
-      <ul style="list-style: none; padding: 0; margin: 0 0 2rem 0; font-size: 0.88rem; color: #e2e8f0; display: flex; flex-direction: column; gap: 0.5rem;">
-        <li>✓ Everything in Starter</li>
-        <li>✓ All 5 platforms</li>
-        <li>✓ Automatic cross-posting</li>
-        <li>✓ Monthly performance report</li>
-        <li>✓ Priority support</li>
-      </ul>
-      <a href="mailto:jobsdoneteam@gmail.com?subject=Pro Plan — $197/mo" style="display:block; text-align:center; background: var(--orange); color: #fff; font-weight: 700; padding: 0.85rem; border-radius: 10px; text-decoration: none; font-size: 0.9rem;">Get Started →</a>
-    </div>
-
-    <!-- Done For You -->
-    <div style="border: 2px solid var(--border); border-radius: 16px; padding: 2rem; background: var(--bg);">
-      <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 0.5rem;">Done For You</div>
-      <div style="font-size: 2.8rem; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 0.25rem;">$397<span style="font-size: 1rem; font-weight: 500; color: var(--muted);">/mo</span></div>
-      <p style="font-size: 0.88rem; color: var(--muted); margin-bottom: 1.5rem; line-height: 1.5;">We write and post your content for you. 3x/week, every week. Completely hands-free.</p>
-      <ul style="list-style: none; padding: 0; margin: 0 0 2rem 0; font-size: 0.88rem; display: flex; flex-direction: column; gap: 0.5rem;">
-        <li>✓ Everything in Pro</li>
-        <li>✓ 3 posts written weekly</li>
-        <li>✓ Photos sourced, captions written</li>
-        <li>✓ Seasonal promotions</li>
-        <li>✓ Dedicated account manager</li>
-      </ul>
-      <a href="mailto:jobsdoneteam@gmail.com?subject=Done For You Plan — $397/mo" style="display:block; text-align:center; background: var(--dark); color: var(--bg); font-weight: 700; padding: 0.85rem; border-radius: 10px; text-decoration: none; font-size: 0.9rem;">Get Started →</a>
-    </div>
-
   </div>
-  <p style="text-align:center; margin-top: 1.5rem; font-size: 0.82rem; color: var(--muted);">We reply within 24 hours. Most businesses are live within 48 hours of signing up.</p>
-</section>
+</div>
 
-<!-- BOTTOM CTA -->
-<section style="background: var(--dark); color: #fff; padding: 5rem 1.5rem; text-align: center;">
-  <h2 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; letter-spacing: -0.04em; margin-bottom: 1rem;">Your competitors are already online.<br>Let's catch up.</h2>
-  <p style="color: #94a3b8; margin-bottom: 2rem; font-size: 1rem;">If people can't find you, they hire someone else.</p>
-  <a href="mailto:jobsdoneteam@gmail.com?subject=I want to get my business online" style="display:inline-flex; align-items:center; gap:0.5rem; background: var(--orange); color: #fff; font-weight: 700; font-size: 1rem; text-decoration: none; padding: 0.9rem 2.25rem; border-radius: 10px;">Get My Business Online →</a>
-</section>
+<div class="sec alt" id="pricing">
+  <div class="inner">
+    <div class="p-hdr"><h2>Simple pricing. No surprises.</h2><p>Start where it makes sense. Upgrade anytime. Cancel anytime.</p></div>
+    <div class="p-grid">
+      <div class="pc">
+        <div class="p-tier">Starter</div>
+        <div class="p-price">$97<span>/mo</span></div>
+        <div class="p-desc">Everything you need to get found online and look professional. Perfect first step.</div>
+        <ul class="p-feats">
+          <li><span class="ck">&#x2713;</span> Professional website, built &amp; hosted</li>
+          <li><span class="ck">&#x2713;</span> Google Business profile setup</li>
+          <li><span class="ck">&#x2713;</span> Facebook, Instagram &amp; TikTok setup</li>
+          <li><span class="ck">&#x2713;</span> Weekly content posts across all platforms</li>
+          <li><span class="ck">&#x2713;</span> Local SEO so customers find you</li>
+          <li><span class="ck">&#x2713;</span> Basic review request automation</li>
+        </ul>
+        <a href="mailto:jobsdoneteam@gmail.com?subject=Starter Plan — $97/mo" class="p-cta">Get Started &#x2197;</a>
+      </div>
+      <div class="pc feat">
+        <div class="p-badge">Most Popular</div>
+        <div class="p-tier">Growth</div>
+        <div class="p-price">$197<span>/mo</span></div>
+        <div class="p-desc">Everything in Starter, plus automations that save you hours every week.</div>
+        <ul class="p-feats">
+          <li><span class="ck">&#x2713;</span> Everything in Starter</li>
+          <li><span class="ck">&#x2713;</span> Lead follow-up automation</li>
+          <li><span class="ck">&#x2713;</span> Automated review requests after every job</li>
+          <li><span class="ck">&#x2713;</span> Appointment reminders &amp; confirmations</li>
+          <li><span class="ck">&#x2713;</span> Daily content posts</li>
+          <li><span class="ck">&#x2713;</span> Basic reporting dashboard</li>
+          <li><span class="ck">&#x2713;</span> Priority support</li>
+        </ul>
+        <a href="mailto:jobsdoneteam@gmail.com?subject=Growth Plan — $197/mo" class="p-cta">Get Started &#x2197;</a>
+      </div>
+      <div class="pc">
+        <div class="p-tier">Done For You</div>
+        <div class="p-price">$397<span>/mo</span></div>
+        <div class="p-desc">Full backoffice upgrade. We handle everything &mdash; you focus 100% on the work.</div>
+        <ul class="p-feats">
+          <li><span class="ck">&#x2713;</span> Everything in Growth</li>
+          <li><span class="ck">&#x2713;</span> Custom dashboard for your business</li>
+          <li><span class="ck">&#x2713;</span> AI agent for leads, booking &amp; follow-up</li>
+          <li><span class="ck">&#x2713;</span> We write &amp; post all your content</li>
+          <li><span class="ck">&#x2713;</span> Paid ad management</li>
+          <li><span class="ck">&#x2713;</span> Monthly strategy call</li>
+          <li><span class="ck">&#x2713;</span> Custom tools built as your business grows</li>
+        </ul>
+        <a href="mailto:jobsdoneteam@gmail.com?subject=Done For You — $397/mo" class="p-cta">Get Started &#x2197;</a>
+      </div>
+    </div>
+    <p class="p-note"><strong>Need something specific?</strong> Custom builds available. <a href="mailto:jobsdoneteam@gmail.com?subject=Custom Build" style="color:var(--green)">Email us</a> &mdash; we&rsquo;ll put together a quote.</p>
+  </div>
+</div>
 
-<!-- FOOTER -->
+<div class="sec dark" style="text-align:center">
+  <div class="inner-md">
+    <h2 style="color:#fff">Need something<br><em style="font-style:normal;color:#4ade80">built from scratch?</em></h2>
+    <p style="color:rgba(255,255,255,0.65);max-width:580px;margin:0 auto 2.5rem;line-height:1.7">Not every business fits a package. If you need a custom tool, a specific integration, or something you&rsquo;ve never seen anywhere else &mdash; we build that too.</p>
+    <div class="cust-grid">
+      <div class="ci"><div class="ci-icon">&#x1F4CA;</div><h3>Custom Dashboards</h3><p>See your business exactly how you want to see it.</p></div>
+      <div class="ci"><div class="ci-icon">&#x1F517;</div><h3>Integrations</h3><p>Connect your tools &mdash; QuickBooks, Jobber, ServiceTitan, anything.</p></div>
+      <div class="ci"><div class="ci-icon">&#x1F916;</div><h3>AI Agents</h3><p>Custom AI built for exactly how you run your business.</p></div>
+      <div class="ci"><div class="ci-icon">&#x1F4CB;</div><h3>Customer Portals</h3><p>Give clients a place to view jobs, pay invoices, and request service.</p></div>
+      <div class="ci"><div class="ci-icon">&#x1F4F1;</div><h3>Mobile Tools</h3><p>Tools your crew can use in the field, on their phones.</p></div>
+      <div class="ci"><div class="ci-icon">&#x1F4A1;</div><h3>Whatever You Need</h3><p>Tell us the problem. We&rsquo;ll figure out the solution.</p></div>
+    </div>
+    <a href="mailto:jobsdoneteam@gmail.com?subject=Custom Build Inquiry" class="cust-cta">Tell Us What You Need &#x2197;</a>
+    <p class="cust-sub">No obligation. We&rsquo;ll respond within a few hours.</p>
+  </div>
+</div>
+
+<div class="sec" style="text-align:center">
+  <div class="inner-md">
+    <h2>Built for people who work with their hands.</h2>
+    <div class="t-grid">
+      <div class="tc"><p>&ldquo;I didn&rsquo;t even have a Facebook page before. Now I get calls from Google every week. Didn&rsquo;t have to touch any of it.&rdquo;</p><div class="tc-auth">&mdash; Mike, HVAC Contractor</div></div>
+      <div class="tc"><p>&ldquo;They built me a dashboard that shows all my open jobs and invoices. I used to lose track of stuff constantly. Not anymore.&rdquo;</p><div class="tc-auth">&mdash; Dave, Electrician</div></div>
+      <div class="tc"><p>&ldquo;Worth every penny. I used to spend hours a week on this stuff. Now I just do the work and the rest handles itself.&rdquo;</p><div class="tc-auth">&mdash; Tom, Lawn Care</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec alt">
+  <div style="max-width:680px;margin:0 auto">
+    <h2 style="text-align:center">Common questions.</h2>
+    <div class="faq-list">
+      <div class="fi"><h3>Do I need to know anything about tech?</h3><p>No. That&rsquo;s the whole point. You tell us about your business, we handle everything.</p></div>
+      <div class="fi"><h3>How long does setup take?</h3><p>48 hours for the core setup. Custom builds take longer &mdash; we&rsquo;ll give you a clear timeline upfront.</p></div>
+      <div class="fi"><h3>Can I add things later?</h3><p>Yes. Most clients start with a plan and add things as their business grows. We&rsquo;re built for that.</p></div>
+      <div class="fi"><h3>What if I just need one specific thing?</h3><p>Email us. We do one-off custom builds too. No package required.</p></div>
+      <div class="fi"><h3>Can I cancel anytime?</h3><p>Yes. No contracts, no cancellation fees. Just let us know.</p></div>
+      <div class="fi"><h3>What kinds of businesses do you work with?</h3><p>Contractors and local service businesses &mdash; HVAC, electrical, plumbing, lawn care, cleaning, roofing, pest control, painting, and more.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-sec">
+  <h2>Ready to upgrade your business?</h2>
+  <p>Tell us what you need. We&rsquo;ll have a plan ready within a few hours.</p>
+  <a href="mailto:jobsdoneteam@gmail.com?subject=Get Started" class="hero-btn">Get Started Today &#x2197;</a>
+</div>
+
 <footer>
-  <div class="footer-brand">Jobs<span>Done</span></div>
-  <div class="footer-links">
-    <a href="https://x.com/jobs_done_team" target="_blank">𝕏 Twitter</a>
-    <a href="/index.html">Investors →</a>
-    <a href="mailto:jobsdoneteam@gmail.com">Contact</a>
-  </div>
+  <div class="f-logo">Jobs<span>Done</span></div>
+  <div class="f-links"><a href="mailto:jobsdoneteam@gmail.com">Contact</a><a href="https://x.com/jobs_done_team" target="_blank">Twitter/X</a></div>
+  <p class="f-copy">&copy; 2025 Jobs Done. We upgrade small businesses.</p>
 </footer>
 
 </body>
