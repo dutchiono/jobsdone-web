@@ -3,550 +3,700 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FieldFlow — The Operating System for Service Businesses</title>
-  <meta name="description" content="FieldFlow gives service businesses the software, automation, and AI tools to run like a modern company. Jobs, dispatch, invoicing, inventory, and time cards — all in one place." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/src/styles/main.css" />
+  <title>Jobs Done — Your Business Visible, Organized, Growing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}body{font-family:'Inter',sans-serif;color:#0f172a;background:#fff}
+    :root{--green:#16a34a;--green-light:#dcfce7;--dark:#0f172a;--muted:#64748b;--border:#e2e8f0;--bg2:#f8fafc}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.5rem;background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+    .nav-logo{font-size:1.15rem;font-weight:800;color:var(--dark);letter-spacing:-0.03em}.nav-logo span{color:var(--green)}
+    .nav-cta{background:var(--dark);color:#fff;font-weight:700;font-size:0.85rem;text-decoration:none;padding:0.55rem 1.15rem;border-radius:8px}
+    .hero{background:var(--dark);color:#fff;padding:5rem 1.5rem 4rem;text-align:center}
+    .hero-tag{display:inline-block;background:rgba(22,163,74,0.2);color:#4ade80;border:1px solid rgba(74,222,128,0.3);border-radius:999px;padding:0.4rem 1rem;font-size:0.8rem;font-weight:600;letter-spacing:0.04em;margin-bottom:1.5rem}
+    .hero h1{font-size:clamp(2.4rem,6vw,4rem);font-weight:800;letter-spacing:-0.04em;line-height:1.05;margin-bottom:1rem}
+    .hero h1 em{font-style:normal;color:#4ade80}
+    .hero-subh{font-size:1.35rem;color:rgba(255,255,255,0.85);max-width:680px;margin:0 auto 0.75rem;line-height:1.5;font-weight:500}
+    .hero>p{font-size:1.05rem;color:rgba(255,255,255,0.6);max-width:600px;margin:0 auto 2rem;line-height:1.7}
+    .hero-btn{display:inline-block;background:#16a34a;color:#fff;font-weight:700;font-size:1.05rem;text-decoration:none;padding:1rem 2.25rem;border-radius:10px}
+    .hero-note{margin-top:1rem;font-size:0.85rem;color:rgba(255,255,255,0.4)}
+    .sec{padding:5rem 1.5rem}.sec.alt{background:var(--bg2)}.sec.dark{background:var(--dark);color:#fff}
+    .inner{max-width:1100px;margin:0 auto}.inner-sm{max-width:780px;margin:0 auto}.inner-md{max-width:860px;margin:0 auto}.inner-lg{max-width:1100px;margin:0 auto}
+    .label{font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--green);margin-bottom:0.75rem}
+    h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:1rem}
+    .sub{font-size:1.05rem;color:var(--muted);max-width:580px;margin-bottom:3rem;line-height:1.7}
+    
+    .demo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:3rem}
+    .demo-card{background:#fff;border:1.5px solid var(--border);border-radius:16px;overflow:hidden}
+    .demo-card-hdr{padding:1rem 1.25rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:0.5rem}
+    .demo-card-hdr span{font-size:0.8rem;font-weight:600;color:var(--muted)}
+    .demo-card-body{padding:1.25rem;min-height:200px}
+    
+    .mock-site{text-align:center;padding:1rem}
+    .mock-site-logo{font-size:1.1rem;font-weight:800;color:var(--dark);margin-bottom:0.25rem}
+    .mock-site-logo span{color:var(--green)}
+    .mock-site-tag{font-size:0.7rem;color:var(--muted);margin-bottom:1rem}
+    .mock-site-hero{background:linear-gradient(135deg,#1e293b 0%,#0f172a 100%);border-radius:10px;padding:1.25rem;margin-bottom:1rem;color:#fff}
+    .mock-site-hero h3{font-size:0.95rem;font-weight:700;margin-bottom:0.35rem}
+    .mock-site-hero p{font-size:0.75rem;opacity:0.7}
+    .mock-site-btns{display:flex;gap:0.5rem;margin-bottom:1rem}
+    .mock-site-btns b{flex:1;background:var(--green);color:#fff;font-size:0.7rem;padding:0.5rem;border-radius:6px;text-align:center}
+    .mock-site-btns i{flex:1;background:#fff;border:1px solid var(--border);color:var(--dark);font-size:0.7rem;font-style:normal;padding:0.5rem;border-radius:6px;text-align:center}
+    .mock-site-services{display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center}
+    .mock-site-svc{background:var(--bg2);font-size:0.65rem;padding:0.3rem 0.6rem;border-radius:4px;color:var(--muted)}
+    
+    .mock-dash{font-size:0.75rem}
+    .mock-dash-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid var(--border)}
+    .mock-dash-hdr b{font-size:0.85rem}
+    .mock-dash-kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:0.5rem;margin-bottom:1rem}
+    .mock-dash-kpi{background:var(--bg2);border-radius:8px;padding:0.75rem}
+    .mock-dash-kpi i{font-size:0.65rem;color:var(--muted);display:block;margin-bottom:0.25rem;font-style:normal}
+    .mock-dash-kpi b{font-size:1.1rem;color:var(--dark)}
+    .mock-dash-kpi.blue b{color:#2563eb}
+    .mock-dash-kpi.green b{color:#16a34a}
+    .mock-dash-jobs{background:var(--bg2);border-radius:8px;padding:0.75rem}
+    .mock-dash-jobs b{display:block;margin-bottom:0.5rem;font-size:0.75rem}
+    .mock-dash-job{display:flex;align-items:center;gap:0.5rem;margin-bottom:0.4rem}
+    .mock-dash-job-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+    .mock-dash-job-dot.green{background:#16a34a}
+    .mock-dash-job-dot.blue{background:#2563eb}
+    .mock-dash-job-dot.orange{background:#ea580c}
+    .mock-dash-job span{font-size:0.7rem;color:var(--muted)}
+    
+    .mock-sms{background:#0f172a;border-radius:12px;padding:1rem;min-height:220px}
+    .mock-sms-hdr{font-size:0.6rem;color:rgba(255,255,255,0.4);text-align:center;margin-bottom:0.75rem;letter-spacing:0.05em}
+    .mock-sms-msg{background:#1e293b;border-radius:10px 10px 10px 3px;padding:0.6rem 0.75rem;margin-bottom:0.5rem}
+    .mock-sms-msg p{color:#e2e8f0;font-size:0.75rem;line-height:1.45}
+    .mock-sms-reply{background:#16a34a;border-radius:10px 10px 3px 10px;padding:0.6rem 0.75rem;margin-bottom:0.5rem;margin-left:1.5rem}
+    .mock-sms-reply p{color:#fff;font-size:0.75rem;line-height:1.45}
+    
+    .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:3rem}
+    .pillar{background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:2rem;text-align:center;transition:border-color 0.2s}
+    .pillar:hover{border-color:#86efac}
+    .pillar-icon{width:56px;height:56px;background:var(--green-light);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 1rem}
+    .pillar h3{font-size:1.15rem;font-weight:700;color:var(--dark);margin-bottom:0.5rem}
+    .pillar>p{font-size:0.9rem;color:var(--muted);line-height:1.6;margin-bottom:1.25rem}
+    .pillar ul{text-align:left;list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+    .pillar li{font-size:0.85rem;color:#374151;display:flex;align-items:flex-start;gap:0.5rem}
+    .pillar li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0}
+    
+    .grid8{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem}
+    .card{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.5rem;transition:border-color 0.2s}
+    .card:hover{border-color:#86efac}
+    .card-icon{font-size:1.5rem;margin-bottom:0.6rem}
+    .card h3{font-size:1rem;font-weight:700;color:var(--dark);margin-bottom:0.4rem}
+    .card p{font-size:0.85rem;color:var(--muted);line-height:1.55}
+    
+    .ex-carousel{margin-top:2.5rem}
+    .ex-tabs{display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin-bottom:2rem}
+    .ex-tab{background:#fff;border:1.5px solid var(--border);border-radius:999px;padding:0.6rem 1.25rem;font-size:0.85rem;font-weight:600;color:var(--muted);cursor:pointer;transition:all 0.2s}
+    .ex-tab:hover{border-color:var(--green);color:var(--dark)}
+    .ex-tab.active{background:var(--green);border-color:var(--green);color:#fff}
+    .ex-slide{display:none;background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:2.5rem;max-width:720px;margin:0 auto;text-align:left;animation:fadeIn 0.3s ease}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    .ex-slide.active{display:block}
+    .ex-slide-hdr{display:flex;align-items:flex-start;gap:1.25rem;margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+    .ex-slide-icon{width:56px;height:56px;background:var(--green-light);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.75rem;flex-shrink:0}
+    .ex-slide-meta h3{font-size:1.35rem;font-weight:800;color:var(--dark);margin-bottom:0.35rem;letter-spacing:-0.02em}
+    .ex-slide-tag{display:inline-block;background:var(--green-light);color:var(--green);font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;border-radius:999px;padding:0.25rem 0.75rem}
+    .ex-slide-body p{font-size:1.05rem;color:#374151;line-height:1.75;margin-bottom:1.25rem}
+    .ex-slide-detail{background:var(--bg2);border-radius:12px;padding:1.25rem}
+    .ex-slide-detail h4{font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:0.5rem}
+    .ex-slide-detail p{font-size:0.9rem;color:#374151;line-height:1.6;margin:0}
+    @media(max-width:640px){.ex-slide-hdr{flex-direction:column;align-items:center;text-align:center}.ex-tabs{flex-direction:column;align-items:stretch}.ex-tab{text-align:center}}
+    
+    .steps-list{display:grid;gap:1.5rem}
+    .step{display:flex;gap:1.25rem;align-items:flex-start;padding:1.5rem;background:var(--bg2);border:1.5px solid var(--border);border-radius:14px}
+    .step-n{flex-shrink:0;width:2.25rem;height:2.25rem;background:var(--dark);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.9rem}
+    .step h3{font-size:1rem;font-weight:700;color:var(--dark);margin-bottom:0.35rem}
+    .step p{font-size:0.87rem;color:var(--muted);line-height:1.6}
+    
+    .p-hdr{text-align:center;margin-bottom:3rem}.p-hdr p{color:var(--muted)}
+    .p-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+    .pc{background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:2rem;display:flex;flex-direction:column;position:relative}
+    .pc.feat{border-color:var(--green);box-shadow:0 0 0 4px rgba(22,163,74,0.08)}
+    .p-badge{position:absolute;top:-0.6rem;left:1.5rem;background:var(--green);color:#fff;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:0.25rem 0.75rem;border-radius:999px}
+    .p-tier{font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:0.5rem}
+    .p-price{font-size:2.5rem;font-weight:800;color:var(--dark);letter-spacing:-0.04em;margin-bottom:0.25rem}
+    .p-price span{font-size:1rem;font-weight:500;color:var(--muted)}
+    .p-desc{font-size:0.85rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.5}
+    .p-feats{list-style:none;padding:0;margin:0 0 2rem;display:flex;flex-direction:column;gap:0.6rem;flex:1}
+    .p-feats li{font-size:0.88rem;color:#374151;display:flex;align-items:flex-start;gap:0.5rem;line-height:1.5}
+    .ck{color:var(--green);font-weight:700;flex-shrink:0}
+    .p-cta{display:block;text-align:center;background:var(--dark);color:#fff;font-weight:700;font-size:0.95rem;text-decoration:none;padding:0.85rem 1.5rem;border-radius:10px;margin-top:auto}
+    .pc.feat .p-cta{background:var(--green)}
+    .p-note{text-align:center;font-size:0.85rem;color:var(--muted);margin-top:1.25rem}
+    .p-note strong{color:var(--dark)}
+    
+    .cust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-bottom:3rem;text-align:left}
+    .ci{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1.25rem}
+    .ci-icon{font-size:1.4rem;margin-bottom:0.5rem}
+    .ci h3{font-size:0.9rem;font-weight:700;color:#fff;margin-bottom:0.25rem}
+    .ci p{font-size:0.8rem;color:rgba(255,255,255,0.5);line-height:1.5}
+    .cust-cta{display:inline-block;background:#4ade80;color:#0f172a;font-weight:800;font-size:1.05rem;text-decoration:none;padding:1rem 2.25rem;border-radius:10px}
+    .cust-sub{margin-top:1rem;font-size:0.85rem;color:rgba(255,255,255,0.35)}
+    
+    .t-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;text-align:left;margin-top:3rem}
+    .tc{background:var(--bg2);border:1.5px solid var(--border);border-radius:14px;padding:1.5rem}
+    .tc p{font-size:0.9rem;color:#374151;line-height:1.65;margin-bottom:1rem;font-style:italic}
+    .tc-auth{font-size:0.82rem;font-weight:700;color:var(--muted)}
+    
+    .faq-list{display:flex;flex-direction:column;gap:1rem;margin-top:2.5rem}
+    .fi{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem}
+    .fi h3{font-size:0.95rem;font-weight:700;color:var(--dark);margin-bottom:0.5rem}
+    .fi p{font-size:0.87rem;color:var(--muted);line-height:1.6}
+    
+    .cta-sec{padding:5rem 1.5rem;background:#fff;text-align:center}
+    .cta-sec p{font-size:1rem;color:var(--muted);max-width:480px;margin:0 auto 2rem;line-height:1.7}
+    
+    footer{background:var(--dark);color:rgba(255,255,255,0.5);padding:2.5rem 1.5rem;text-align:center}
+    .f-logo{font-size:1.2rem;font-weight:800;color:#fff;margin-bottom:1rem}.f-logo span{color:#4ade80}
+    .f-links{display:flex;justify-content:center;gap:1.5rem;margin-bottom:1rem}
+    .f-links a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.85rem}
+    .f-copy{font-size:0.78rem}
+    
+    @media(max-width:768px){
+      .demo-grid{grid-template-columns:1fr}
+      .pillars{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <header class="nav-header" id="nav">
-    <div class="container nav-inner">
-      <a href="/" class="nav-logo">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="32" height="32" rx="8" fill="#2563EB"/>
-          <path d="M8 10h10M8 16h16M8 22h12" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-          <circle cx="23" cy="10" r="3" fill="#60A5FA"/>
-        </svg>
-        <span>FieldFlow</span>
-      </a>
-      <nav class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#industries">Industries</a>
-        <a href="#pricing">Pricing</a>
-      </nav>
-      <div class="nav-actions">
-        <a href="https://demo.fieldflow.app" class="btn btn-ghost">View Demo</a>
-        <a href="#pricing" class="btn btn-primary">Get Started</a>
-      </div>
-      <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="nav-mobile-menu" id="mobileMenu">
-      <a href="#features">Features</a>
-      <a href="#how-it-works">How It Works</a>
-      <a href="#industries">Industries</a>
-      <a href="#pricing">Pricing</a>
-      <a href="https://demo.fieldflow.app" class="btn btn-ghost">View Demo</a>
-      <a href="#pricing" class="btn btn-primary">Get Started</a>
-    </div>
-  </header>
+<nav>
+  <div class="nav-logo">Jobs<span>Done</span></div>
+  <a href="#pricing" class="nav-cta">See Pricing &#x2197;</a>
+</nav>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="container hero-inner">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        Now with AI-powered dispatch &amp; scheduling
-      </div>
-      <h1 class="hero-title">
-        The operating system<br/>
-        <span class="gradient-text">for service businesses</span>
-      </h1>
-      <p class="hero-subtitle">
-        Stop running your business on spreadsheets, sticky notes, and group texts.
-        FieldFlow gives your team one place for jobs, dispatch, invoicing, inventory, and time cards —
-        so you can focus on the work, not the chaos.
-      </p>
-      <div class="hero-actions">
-        <a href="#pricing" class="btn btn-primary btn-lg">Start Free Trial</a>
-        <a href="https://demo.fieldflow.app" class="btn btn-outline btn-lg">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5,3 19,12 5,21"/></svg>
-          See Live Demo
-        </a>
-      </div>
-      <p class="hero-note">No credit card required &bull; 14-day free trial &bull; Cancel anytime</p>
-      <div class="hero-screenshot">
-        <div class="screenshot-bar">
-          <span></span><span></span><span></span>
-          <div class="screenshot-url">app.fieldflow.io/dashboard</div>
+<div class="hero">
+  <div class="hero-tag">&#x2713; Local service businesses &nbsp;&middot;&nbsp; 48-hour setup &nbsp;&middot;&nbsp; No contracts</div>
+  <h1>Your Business <em>Here.</em></h1>
+  <p class="hero-subh">Visible online. Running smoothly. Growing automatically.</p>
+  <p>A professional website, the FieldFlow platform to manage jobs &amp; customers, and an AI assistant that handles the busywork &mdash; all in one place.</p>
+  <a href="#pricing" class="hero-btn open-modal" data-plan="">Get Started &#x2192;</a>
+  <p class="hero-note">Plans from $97/month &bull; No tech knowledge needed &bull; Cancel anytime</p>
+</div>
+
+<div class="sec" style="background:var(--bg2)">
+  <div class="inner-lg" style="text-align:center">
+    <div class="label">// what you get</div>
+    <h2>See what your business<br>looks like with us.</h2>
+    <p class="sub" style="margin:0 auto 0.5rem">Everything you need to get found, stay organized, and grow &mdash; set up in 48 hours.</p>
+    <div class="demo-grid">
+      <div class="demo-card">
+        <div class="demo-card-hdr">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span>Your Website</span>
         </div>
-        <div class="screenshot-content">
-          <div class="mock-dashboard">
-            <div class="mock-sidebar">
-              <div class="mock-logo-sm"></div>
-              <div class="mock-nav-item active"></div>
-              <div class="mock-nav-item"></div>
-              <div class="mock-nav-item"></div>
-              <div class="mock-nav-item"></div>
-              <div class="mock-nav-item"></div>
-              <div class="mock-nav-item"></div>
+        <div class="demo-card-body">
+          <div class="mock-site">
+            <div class="mock-site-logo">Your Business <span>Name</span></div>
+            <div class="mock-site-tag">Your City, State &bull; (555) 000-0000</div>
+            <div class="mock-site-hero">
+              <h3>Professional Service You Can Trust</h3>
+              <p>Family-owned. Reliable. Affordable.</p>
             </div>
-            <div class="mock-main">
-              <div class="mock-kpis">
-                <div class="mock-kpi">
-                  <div class="mock-kpi-label"></div>
-                  <div class="mock-kpi-value blue"></div>
-                  <div class="mock-kpi-sub"></div>
-                </div>
-                <div class="mock-kpi">
-                  <div class="mock-kpi-label"></div>
-                  <div class="mock-kpi-value green"></div>
-                  <div class="mock-kpi-sub"></div>
-                </div>
-                <div class="mock-kpi">
-                  <div class="mock-kpi-label"></div>
-                  <div class="mock-kpi-value orange"></div>
-                  <div class="mock-kpi-sub"></div>
-                </div>
-                <div class="mock-kpi">
-                  <div class="mock-kpi-label"></div>
-                  <div class="mock-kpi-value purple"></div>
-                  <div class="mock-kpi-sub"></div>
-                </div>
-              </div>
-              <div class="mock-content-row">
-                <div class="mock-chart">
-                  <div class="mock-chart-bars">
-                    <div class="mock-bar" style="height:55%"></div>
-                    <div class="mock-bar" style="height:75%"></div>
-                    <div class="mock-bar" style="height:62%"></div>
-                    <div class="mock-bar" style="height:88%"></div>
-                    <div class="mock-bar" style="height:70%"></div>
-                    <div class="mock-bar highlight" style="height:95%"></div>
-                    <div class="mock-bar" style="height:80%"></div>
-                  </div>
-                </div>
-                <div class="mock-jobs-list">
-                  <div class="mock-job-item">
-                    <div class="mock-job-dot green"></div>
-                    <div class="mock-job-lines">
-                      <div class="mock-line w80"></div>
-                      <div class="mock-line w50"></div>
-                    </div>
-                  </div>
-                  <div class="mock-job-item">
-                    <div class="mock-job-dot blue"></div>
-                    <div class="mock-job-lines">
-                      <div class="mock-line w70"></div>
-                      <div class="mock-line w40"></div>
-                    </div>
-                  </div>
-                  <div class="mock-job-item">
-                    <div class="mock-job-dot orange"></div>
-                    <div class="mock-job-lines">
-                      <div class="mock-line w90"></div>
-                      <div class="mock-line w60"></div>
-                    </div>
-                  </div>
-                  <div class="mock-job-item">
-                    <div class="mock-job-dot green"></div>
-                    <div class="mock-job-lines">
-                      <div class="mock-line w65"></div>
-                      <div class="mock-line w45"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="mock-site-btns">
+              <b>Book Now</b>
+              <i>Get a Quote</i>
+            </div>
+            <div class="mock-site-services">
+              <span class="mock-site-svc">Installations</span>
+              <span class="mock-site-svc">Repairs</span>
+              <span class="mock-site-svc">Maintenance</span>
+              <span class="mock-site-svc">Emergency</span>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- SOCIAL PROOF BAR -->
-  <section class="social-proof-bar">
-    <div class="container">
-      <p class="proof-label">Trusted by service businesses across the country</p>
-      <div class="proof-logos">
-        <div class="proof-logo-item">Alpine HVAC</div>
-        <div class="proof-logo-item">Clearwater Plumbing</div>
-        <div class="proof-logo-item">Volt Electric</div>
-        <div class="proof-logo-item">GreenEdge Lawn</div>
-        <div class="proof-logo-item">Apex Roofing</div>
-        <div class="proof-logo-item">BlueLine Pest</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURES -->
-  <section class="features" id="features">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Platform Features</div>
-        <h2 class="section-title">Everything your team needs.<br/>Nothing they don't.</h2>
-        <p class="section-subtitle">Built specifically for trades and service businesses — not adapted from generic project management software.</p>
-      </div>
-      <div class="features-grid">
-
-        <div class="feature-card feature-card--large">
-          <div class="feature-icon feature-icon--blue">
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          </div>
-          <h3>Jobs &amp; Dispatch</h3>
-          <p>Full job lifecycle from first call to final invoice. Assign techs, track status in real time, and dispatch from a drag-and-drop board. Your whole team stays in sync — even in the field.</p>
-          <ul class="feature-list">
-            <li>Kanban + list view</li>
-            <li>Real-time status updates</li>
-            <li>GPS tech tracking</li>
-            <li>Customer notifications</li>
-          </ul>
+      <div class="demo-card">
+        <div class="demo-card-hdr">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          <span>FieldFlow Dashboard</span>
         </div>
-
-        <div class="feature-card">
-          <div class="feature-icon feature-icon--green">
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10,9 9,9 8,9"/></svg>
-          </div>
-          <h3>Invoicing &amp; Payments</h3>
-          <p>Generate invoices directly from completed jobs. Collect payment in the field or send a payment link. Track what's paid, what's due, and what's overdue.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon feature-icon--purple">
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-          </div>
-          <h3>Inventory Management</h3>
-          <p>Track parts and materials across jobs and trucks. Get low-stock alerts before you're caught short on a job site. Link inventory usage directly to invoices.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon feature-icon--orange">
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
-          </div>
-          <h3>Time Cards</h3>
-          <p>Techs clock in and out from their phone. Managers review and approve from the office. Weekly summaries export directly to payroll. No more paper timesheets.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon feature-icon--blue">
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3>Employee Management</h3>
-          <p>Profiles, certifications, roles, and availability — all in one place. Know who's qualified for what job, who's available today, and who's already booked.</p>
-        </div>
-
-        <div class="feature-card feature-card--large">
-          <div class="feature-icon feature-icon--green">
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-          </div>
-          <h3>Reporting &amp; Analytics</h3>
-          <p>Know your numbers without a spreadsheet. Revenue by period, tech utilization, job completion rates, top customers, and inventory usage — all updated in real time.</p>
-          <ul class="feature-list">
-            <li>Revenue dashboards</li>
-            <li>Tech performance metrics</li>
-            <li>Job completion rates</li>
-            <li>Inventory cost tracking</li>
-          </ul>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon feature-icon--purple">
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <h3>Customer CRM</h3>
-          <p>Every customer's full history — jobs, invoices, equipment, and notes — in one profile. Call a customer and know everything before you say hello.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon feature-icon--orange">
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-          </div>
-          <h3>Mobile PWA</h3>
-          <p>Works on any phone, no app store required. Techs get their schedule, job details, and can clock in/out right from their browser — online or offline.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="how-it-works" id="how-it-works">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">How It Works</div>
-        <h2 class="section-title">Up and running in a day.</h2>
-        <p class="section-subtitle">We set everything up for you. No IT department needed.</p>
-      </div>
-      <div class="steps">
-        <div class="step">
-          <div class="step-number">01</div>
-          <div class="step-content">
-            <h3>We onboard your business</h3>
-            <p>Tell us your services, rates, team members, and how you operate. We configure FieldFlow to match your workflow — not the other way around.</p>
-          </div>
-        </div>
-        <div class="step-connector"></div>
-        <div class="step">
-          <div class="step-number">02</div>
-          <div class="step-content">
-            <h3>Import your customers &amp; history</h3>
-            <p>Bring in your existing customer list, past jobs, and equipment records. We handle the migration from whatever you're using now — even if it's a spreadsheet.</p>
-          </div>
-        </div>
-        <div class="step-connector"></div>
-        <div class="step">
-          <div class="step-number">03</div>
-          <div class="step-content">
-            <h3>Train your team in 30 minutes</h3>
-            <p>FieldFlow is built to be intuitive. Most techs are up to speed in under an hour. Office staff typically take a full morning. We provide training and stay available for questions.</p>
-          </div>
-        </div>
-        <div class="step-connector"></div>
-        <div class="step">
-          <div class="step-number">04</div>
-          <div class="step-content">
-            <h3>Run your business better</h3>
-            <p>Less time chasing paperwork. Fewer missed jobs. Faster invoicing. Better visibility. Your business runs the same way you do — just smoother.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- INDUSTRIES -->
-  <section class="industries" id="industries">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Industries</div>
-        <h2 class="section-title">Built for any trade.<br/>Configured for yours.</h2>
-        <p class="section-subtitle">FieldFlow adapts to your trade's terminology, workflows, and common job types.</p>
-      </div>
-      <div class="industries-grid">
-        <div class="industry-card">
-          <div class="industry-icon">🔧</div>
-          <h4>HVAC</h4>
-          <p>Service calls, installs, maintenance agreements, refrigerant tracking</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-icon">🚿</div>
-          <h4>Plumbing</h4>
-          <p>Emergency calls, remodels, water heaters, drain cleaning</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-icon">⚡</div>
-          <h4>Electrical</h4>
-          <p>Panels, permits, residential &amp; commercial, EV charger installs</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-icon">🌿</div>
-          <h4>Lawn &amp; Landscape</h4>
-          <p>Recurring routes, seasonal work, equipment management</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-icon">🏠</div>
-          <h4>Roofing</h4>
-          <p>Inspections, repairs, full replacements, insurance work</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-icon">🧹</div>
-          <h4>Cleaning</h4>
-          <p>Recurring residential, commercial contracts, team scheduling</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-icon">🪲</div>
-          <h4>Pest Control</h4>
-          <p>Treatment routes, chemical tracking, service agreements</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-icon">🔒</div>
-          <h4>Security &amp; Alarms</h4>
-          <p>Installs, monitoring, inspections, equipment inventory</p>
-        </div>
-      </div>
-      <p class="industries-note">Don't see your trade? <a href="#pricing">We configure for any service business.</a></p>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="testimonials">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">What Customers Say</div>
-        <h2 class="section-title">Real businesses.<br/>Real results.</h2>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="testimonial-text">"We used to lose track of jobs constantly. Now everything is in one place and my guys actually use it. We've invoiced faster and collected more in 60 days than all of last quarter."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">MR</div>
-            <div>
-              <strong>Mike R.</strong>
-              <span>Owner, Alpine HVAC — 6 technicians</span>
+        <div class="demo-card-body">
+          <div class="mock-dash">
+            <div class="mock-dash-hdr">
+              <b>Overview</b>
+              <span style="font-size:0.7rem;color:var(--muted)">This Week</span>
             </div>
-          </div>
-        </div>
-        <div class="testimonial-card testimonial-card--featured">
-          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="testimonial-text">"The dispatch board alone was worth it. I can see all my guys, where they are, what job they're on, and what's next. It's like having a wall of whiteboards but it actually works and updates itself."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">SL</div>
-            <div>
-              <strong>Sandra L.</strong>
-              <span>Operations Manager, Clearwater Plumbing — 12 trucks</span>
+            <div class="mock-dash-kpis">
+              <div class="mock-dash-kpi blue"><i>Active Jobs</i><b>12</b></div>
+              <div class="mock-dash-kpi green"><i>Revenue</i><b>$8,420</b></div>
             </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="testimonial-text">"Setup was way easier than I expected. They handled the whole migration and my crew was using it by day two. The time card feature alone saved me 4 hours a week in payroll headaches."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">DJ</div>
-            <div>
-              <strong>Derek J.</strong>
-              <span>Owner, Volt Electric — 9 electricians</span>
+            <div class="mock-dash-jobs">
+              <b>Today's Jobs</b>
+              <div class="mock-dash-job"><div class="mock-dash-job-dot green"></div><span>Smith - Repair</span></div>
+              <div class="mock-dash-job"><div class="mock-dash-job-dot blue"></div><span>Jones - Install</span></div>
+              <div class="mock-dash-job"><div class="mock-dash-job-dot orange"></div><span>Garcia - Estimate</span></div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- PRICING -->
-  <section class="pricing" id="pricing">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Pricing</div>
-        <h2 class="section-title">Simple, transparent pricing.<br/>No surprises.</h2>
-        <p class="section-subtitle">Everything is included. No per-user fees. No add-on modules. No setup charges.</p>
-      </div>
-      <div class="pricing-grid">
-
-        <div class="pricing-card">
-          <div class="pricing-tier">Starter</div>
-          <div class="pricing-price">
-            <span class="price-amount">$97</span>
-            <span class="price-period">/mo</span>
+      <div class="demo-card">
+        <div class="demo-card-hdr">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span>AI Assistant</span>
+        </div>
+        <div class="demo-card-body">
+          <div class="mock-sms">
+            <div class="mock-sms-hdr">JOBS DONE AGENT &bull; NOW</div>
+            <div class="mock-sms-msg"><p>Hey &mdash; you missed a call from Mrs. Rivera. Want me to send a follow-up text?</p></div>
+            <div class="mock-sms-reply"><p>Yeah send it</p></div>
+            <div class="mock-sms-msg"><p>Done. Also, the Henderson invoice is 3 days out. Send a reminder?</p></div>
+            <div class="mock-sms-reply"><p>Yes please</p></div>
           </div>
-          <p class="pricing-desc">For solo operators and small crews getting organized for the first time.</p>
-          <ul class="pricing-features">
-            <li><span class="check">&#10003;</span> Up to 3 field users</li>
-            <li><span class="check">&#10003;</span> Jobs &amp; dispatch</li>
-            <li><span class="check">&#10003;</span> Customer CRM</li>
-            <li><span class="check">&#10003;</span> Invoicing &amp; payments</li>
-            <li><span class="check">&#10003;</span> Basic reporting</li>
-            <li><span class="check">&#10003;</span> Mobile app access</li>
-            <li><span class="muted">&#8212;</span> Inventory management</li>
-            <li><span class="muted">&#8212;</span> Time cards &amp; payroll export</li>
-            <li><span class="muted">&#8212;</span> Advanced analytics</li>
-          </ul>
-          <a href="#" class="btn btn-outline btn-full">Start Free Trial</a>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-        <div class="pricing-card pricing-card--featured">
-          <div class="pricing-badge">Most Popular</div>
-          <div class="pricing-tier">Professional</div>
-          <div class="pricing-price">
-            <span class="price-amount">$197</span>
-            <span class="price-period">/mo</span>
+<div class="sec">
+  <div class="inner-lg" style="text-align:center">
+    <div class="label">// three pillars</div>
+    <h2>Everything in one place.</h2>
+    <p class="sub" style="margin:0 auto">Website, platform, and AI assistant &mdash; working together so nothing falls through the cracks.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-icon">&#x1F310;</div>
+        <h3>Your Website</h3>
+        <p>Professional site that gets you found and captures leads.</p>
+        <ul>
+          <li>Custom design, your branding</li>
+          <li>Google Business setup</li>
+          <li>Lead capture forms</li>
+          <li>Mobile-optimized</li>
+        </ul>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">&#x1F4CB;</div>
+        <h3>FieldFlow Platform</h3>
+        <p>Manage jobs, customers, and invoicing in one dashboard.</p>
+        <ul>
+          <li>Jobs &amp; dispatch board</li>
+          <li>Customer history &amp; CRM</li>
+          <li>Invoicing &amp; payments</li>
+          <li>Time cards &amp; scheduling</li>
+        </ul>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">&#x1F916;</div>
+        <h3>AI Assistant</h3>
+        <p>Handles follow-ups, reminders, and booking while you work.</p>
+        <ul>
+          <li>Lead follow-up texts</li>
+          <li>Missed call responses</li>
+          <li>Invoice reminders</li>
+          <li>Review requests</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec alt">
+  <div class="inner">
+    <div class="label">// full feature list</div>
+    <h2>Built for how you actually work.</h2>
+    <p class="sub">Not adapted from generic software &mdash; built specifically for trades and service businesses.</p>
+    <div class="grid8">
+      <div class="card"><div class="card-icon">&#x1F4C5;</div><h3>Jobs &amp; Dispatch</h3><p>Drag-and-drop scheduling, real-time status, GPS tracking. Know where everyone is and what's next.</p></div>
+      <div class="card"><div class="card-icon">&#x1F464;</div><h3>Customer CRM</h3><p>Full history for every customer &mdash; jobs, invoices, notes, equipment. Know everything before you pick up the phone.</p></div>
+      <div class="card"><div class="card-icon">&#x1F4B5;</div><h3>Invoicing &amp; Payments</h3><p>Generate invoices from jobs. Collect in the field or send a link. Track what's paid and what's overdue.</p></div>
+      <div class="card"><div class="card-icon">&#x1F310;</div><h3>Website &amp; Online Presence</h3><p>Professional site, Google Business, social profiles &mdash; built, branded, and live in 48 hours.</p></div>
+      <div class="card"><div class="card-icon">&#x1F916;</div><h3>AI Automations</h3><p>Lead follow-up, review requests, appointment reminders, invoice tracking &mdash; all on autopilot.</p></div>
+      <div class="card"><div class="card-icon">&#x23F1;&#xFE0F;</div><h3>Time Cards</h3><p>Techs clock in from their phone. You review and approve. Exports to payroll. No more paper.</p></div>
+      <div class="card"><div class="card-icon">&#x1F4CA;</div><h3>Reporting &amp; Analytics</h3><p>Revenue, utilization, job completion &mdash; all your numbers in one place, updated in real time.</p></div>
+      <div class="card"><div class="card-icon">&#x1F4F1;</div><h3>Mobile Access</h3><p>Works on any phone. Techs see their schedule, job details, and clock in/out from the browser.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="inner-lg">
+    <div class="label" style="text-align:center">// real examples</div>
+    <h2 style="text-align:center">Here&rsquo;s what this looks like<br>for real businesses.</h2>
+    <p class="sub" style="text-align:center;margin:0 auto">Every business is different. Click on a trade to see how we&rsquo;ve helped businesses like yours.</p>
+    <div class="ex-carousel">
+      <div class="ex-tabs">
+        <button class="ex-tab active" data-slide="0">HVAC Contractor</button>
+        <button class="ex-tab" data-slide="1">Lawn Care</button>
+        <button class="ex-tab" data-slide="2">Electrician</button>
+        <button class="ex-tab" data-slide="3">Plumber</button>
+        <button class="ex-tab" data-slide="4">Cleaning Company</button>
+        <button class="ex-tab" data-slide="5">Roofer</button>
+      </div>
+      <div class="ex-slide active" data-slide="0">
+        <div class="ex-slide-hdr">
+          <div class="ex-slide-icon">&#x1F527;</div>
+          <div class="ex-slide-meta">
+            <h3>Lead-to-booked in 5 minutes</h3>
+            <span class="ex-slide-tag">HVAC Contractor</span>
           </div>
-          <p class="pricing-desc">For growing teams that need full operations management in one place.</p>
-          <ul class="pricing-features">
-            <li><span class="check">&#10003;</span> Up to 10 field users</li>
-            <li><span class="check">&#10003;</span> Jobs &amp; dispatch</li>
-            <li><span class="check">&#10003;</span> Customer CRM</li>
-            <li><span class="check">&#10003;</span> Invoicing &amp; payments</li>
-            <li><span class="check">&#10003;</span> Advanced reporting</li>
-            <li><span class="check">&#10003;</span> Mobile app access</li>
-            <li><span class="check">&#10003;</span> Inventory management</li>
-            <li><span class="check">&#10003;</span> Time cards &amp; payroll export</li>
-            <li><span class="muted">&#8212;</span> Custom analytics dashboard</li>
-          </ul>
-          <a href="#" class="btn btn-primary btn-full">Start Free Trial</a>
         </div>
-
-        <div class="pricing-card">
-          <div class="pricing-tier">Business</div>
-          <div class="pricing-price">
-            <span class="price-amount">$397</span>
-            <span class="price-period">/mo</span>
+        <div class="ex-slide-body">
+          <p>Mike runs a 6-truck HVAC operation. He was missing calls constantly while on job sites &mdash; and every missed call was a lost customer. Leads would come in through Google, sit in his inbox for hours, and by the time he called back, they&rsquo;d already booked someone else.</p>
+          <p>We set up an AI agent that responds to every inquiry within 60 seconds, asks a few qualifying questions, and automatically books the estimate on his calendar. Now Mike shows up to jobs that are already confirmed &mdash; no phone tag, no missed leads.</p>
+        </div>
+        <div class="ex-slide-detail">
+          <h4>The Result</h4>
+          <p>Lead response time dropped from 4+ hours to under 1 minute. Booked estimates increased 34% in the first 60 days. Mike stopped losing jobs to faster competitors.</p>
+        </div>
+      </div>
+      <div class="ex-slide" data-slide="1">
+        <div class="ex-slide-hdr">
+          <div class="ex-slide-icon">&#x1F33F;</div>
+          <div class="ex-slide-meta">
+            <h3>Customer reviews on autopilot</h3>
+            <span class="ex-slide-tag">Lawn Care</span>
           </div>
-          <p class="pricing-desc">For established operations that need full visibility and no limits.</p>
-          <ul class="pricing-features">
-            <li><span class="check">&#10003;</span> Unlimited field users</li>
-            <li><span class="check">&#10003;</span> Jobs &amp; dispatch</li>
-            <li><span class="check">&#10003;</span> Customer CRM</li>
-            <li><span class="check">&#10003;</span> Invoicing &amp; payments</li>
-            <li><span class="check">&#10003;</span> Advanced reporting</li>
-            <li><span class="check">&#10003;</span> Mobile app access</li>
-            <li><span class="check">&#10003;</span> Inventory management</li>
-            <li><span class="check">&#10003;</span> Time cards &amp; payroll export</li>
-            <li><span class="check">&#10003;</span> Custom analytics dashboard</li>
-          </ul>
-          <a href="#" class="btn btn-outline btn-full">Start Free Trial</a>
         </div>
-
+        <div class="ex-slide-body">
+          <p>Sarah runs a lawn care business with 4 crews. She knew reviews were important for showing up in local search, but she never remembered to ask customers. And when she did ask, most people forgot &mdash; she was lucky to get 1 review a month.</p>
+          <p>We automated the entire process. Now when a job is marked complete in FieldFlow, the customer automatically gets a text thanking them and asking for a Google review. No effort from Sarah, no awkward conversations, just a steady stream of reviews.</p>
+        </div>
+        <div class="ex-slide-detail">
+          <h4>The Result</h4>
+          <p>47 reviews in 3 months. Her Google Business listing jumped from page 3 to the top of local results. She now gets 3x more calls from Google than she did before.</p>
+        </div>
       </div>
-      <div class="pricing-note">
-        <p>All plans include a 14-day free trial, onboarding assistance, and data migration. <strong>Annual billing saves 20%.</strong></p>
+      <div class="ex-slide" data-slide="2">
+        <div class="ex-slide-hdr">
+          <div class="ex-slide-icon">&#x26A1;</div>
+          <div class="ex-slide-meta">
+            <h3>Job dashboard, no more spreadsheets</h3>
+            <span class="ex-slide-tag">Electrician</span>
+          </div>
+        </div>
+        <div class="ex-slide-body">
+          <p>Derek runs a 9-person electrical company. He was tracking jobs in a spreadsheet, invoices in QuickBooks, and customer notes in a notebook. Nothing talked to each other, and he was constantly losing track of where things stood.</p>
+          <p>We set him up on FieldFlow with a custom dashboard that shows all open jobs, pending invoices, and customer history in one view. Now he pulls out his phone and knows exactly what&rsquo;s happening &mdash; who&rsquo;s working, what&rsquo;s due, and who needs a callback.</p>
+        </div>
+        <div class="ex-slide-detail">
+          <h4>The Result</h4>
+          <p>Derek spends 2 hours less per week on admin work. He caught $3,200 in unbilled work in the first month just by having visibility into his jobs.</p>
+        </div>
+      </div>
+      <div class="ex-slide" data-slide="3">
+        <div class="ex-slide-hdr">
+          <div class="ex-slide-icon">&#x1F6B0;</div>
+          <div class="ex-slide-meta">
+            <h3>Social posted without thinking about it</h3>
+            <span class="ex-slide-tag">Plumber</span>
+          </div>
+        </div>
+        <div class="ex-slide-body">
+          <p>Carlos knows social media is important, but he&rsquo;s busy running calls all day. He&rsquo;d take photos of finished jobs and they&rsquo;d sit on his phone for weeks. By the time he got around to posting, the moment was gone &mdash; and he never knew what to write anyway.</p>
+          <p>We made it stupid simple. Carlos finishes a job, snaps a photo, texts it to us. We write the caption and post it to Facebook, Instagram, and his Google Business profile. He does zero work and his social presence stays active.</p>
+        </div>
+        <div class="ex-slide-detail">
+          <h4>The Result</h4>
+          <p>12 posts per month across 3 platforms. His Google Business engagement is up 4x. Customers mention seeing his work on Facebook all the time.</p>
+        </div>
+      </div>
+      <div class="ex-slide" data-slide="4">
+        <div class="ex-slide-hdr">
+          <div class="ex-slide-icon">&#x1F9F9;</div>
+          <div class="ex-slide-meta">
+            <h3>Recurring payment, zero invoicing</h3>
+            <span class="ex-slide-tag">Cleaning Company</span>
+          </div>
+        </div>
+        <div class="ex-slide-body">
+          <p>Jennifer runs a residential cleaning company with 45 recurring clients. Every month she&rsquo;d spend a full day creating invoices, sending them out, and then chasing payments. Half her clients paid late. Some never paid at all.</p>
+          <p>We moved all her recurring clients to auto-pay through FieldFlow. Now invoices are generated automatically, cards are charged automatically, and if a payment fails, the system sends a reminder and retries. Jennifer doesn&rsquo;t touch any of it.</p>
+        </div>
+        <div class="ex-slide-detail">
+          <h4>The Result</h4>
+          <p>Collections time dropped from 8 hours/month to zero. On-time payments went from 55% to 98%. Jennifer stopped chasing checks entirely.</p>
+        </div>
+      </div>
+      <div class="ex-slide" data-slide="5">
+        <div class="ex-slide-hdr">
+          <div class="ex-slide-icon">&#x1F3ED;</div>
+          <div class="ex-slide-meta">
+            <h3>Estimate tool on the website</h3>
+            <span class="ex-slide-tag">Roofer</span>
+          </div>
+        </div>
+        <div class="ex-slide-body">
+          <p>Tony gets a lot of tire-kickers. People want to know what a new roof costs, but they don&rsquo;t want to commit to an in-person estimate. He was spending hours driving to appointments that never converted.</p>
+          <p>We built an estimate calculator right into his website. Customers put in their square footage, roof type, and a few details. They get an instant ballpark range. If they like what they see, they book the in-person estimate right there &mdash; and Tony shows up to a warm lead with all the info ready.</p>
+        </div>
+        <div class="ex-slide-detail">
+          <h4>The Result</h4>
+          <p>Estimate conversion rate jumped from 30% to 65%. Tony spends less time on unqualified leads and more time closing jobs that are ready to buy.</p>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- FINAL CTA -->
-  <section class="final-cta">
-    <div class="container">
-      <div class="cta-box">
-        <h2>Ready to see it in action?</h2>
-        <p>Explore a fully loaded demo account — real jobs, real data, real workflows. No signup required.</p>
-        <div class="cta-actions">
-          <a href="https://demo.fieldflow.app" class="btn btn-white btn-lg">Explore Live Demo</a>
-          <a href="#pricing" class="btn btn-outline-white btn-lg">Start Free Trial</a>
-        </div>
+<div class="sec alt">
+  <div class="inner-sm">
+    <div style="text-align:center;margin-bottom:3rem"><h2>Simple to get started.</h2><p style="color:var(--muted)">You don&rsquo;t need to know anything about tech. We figure it all out for you.</p></div>
+    <div class="steps-list">
+      <div class="step"><div class="step-n">1</div><div><h3>Tell us about your business</h3><p>Email us or fill out a short form. Tell us what you do, where you work, and what&rsquo;s frustrating you most. Takes 5 minutes.</p></div></div>
+      <div class="step"><div class="step-n">2</div><div><h3>We put together a plan</h3><p>We figure out what you actually need &mdash; not a one-size-fits-all package, but exactly what will make a difference for your business right now.</p></div></div>
+      <div class="step"><div class="step-n">3</div><div><h3>We build it, you approve it</h3><p>48 hours for the core setup. We show you everything before it goes live. You give the green light, we flip the switch.</p></div></div>
+      <div class="step"><div class="step-n">4</div><div><h3>We keep it running</h3><p>Monthly updates, content, monitoring, and improvements. Your business keeps growing &mdash; we keep everything working.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec" id="pricing">
+  <div class="inner">
+    <div class="p-hdr"><h2>Simple pricing. No surprises.</h2><p>Start where it makes sense. Upgrade anytime. Cancel anytime.</p></div>
+    <div class="p-grid">
+      <div class="pc">
+        <div class="p-tier">Starter</div>
+        <div class="p-price">$97<span>/mo</span></div>
+        <div class="p-desc">Website + basic FieldFlow. Get found and look professional.</div>
+        <ul class="p-feats">
+          <li><span class="ck">&#x2713;</span> Professional website, built &amp; hosted</li>
+          <li><span class="ck">&#x2713;</span> Google Business profile setup</li>
+          <li><span class="ck">&#x2713;</span> FieldFlow: Jobs, customers, invoicing</li>
+          <li><span class="ck">&#x2713;</span> Up to 3 field users</li>
+          <li><span class="ck">&#x2713;</span> Basic review request automation</li>
+          <li><span class="ck">&#x2713;</span> Weekly social posts</li>
+        </ul>
+        <a href="#" class="p-cta open-modal" data-plan="Starter — $97/mo">Get Started &#x2197;</a>
+      </div>
+      <div class="pc feat">
+        <div class="p-badge">Most Popular</div>
+        <div class="p-tier">Growth</div>
+        <div class="p-price">$197<span>/mo</span></div>
+        <div class="p-desc">Full platform + AI assistant. Automate the busywork.</div>
+        <ul class="p-feats">
+          <li><span class="ck">&#x2713;</span> Everything in Starter</li>
+          <li><span class="ck">&#x2713;</span> AI assistant for leads &amp; follow-up</li>
+          <li><span class="ck">&#x2713;</span> Up to 10 field users</li>
+          <li><span class="ck">&#x2713;</span> Inventory management</li>
+          <li><span class="ck">&#x2713;</span> Time cards &amp; payroll export</li>
+          <li><span class="ck">&#x2713;</span> Daily social posts + reporting</li>
+          <li><span class="ck">&#x2713;</span> Priority support</li>
+        </ul>
+        <a href="#" class="p-cta open-modal" data-plan="Growth — $197/mo">Get Started &#x2197;</a>
+      </div>
+      <div class="pc">
+        <div class="p-tier">Done For You</div>
+        <div class="p-price">$397<span>/mo</span></div>
+        <div class="p-desc">We handle everything. You focus 100% on the work.</div>
+        <ul class="p-feats">
+          <li><span class="ck">&#x2713;</span> Everything in Growth</li>
+          <li><span class="ck">&#x2713;</span> Unlimited field users</li>
+          <li><span class="ck">&#x2713;</span> Custom dashboard built for you</li>
+          <li><span class="ck">&#x2713;</span> We write &amp; post all content</li>
+          <li><span class="ck">&#x2713;</span> Paid ad management</li>
+          <li><span class="ck">&#x2713;</span> Monthly strategy call</li>
+          <li><span class="ck">&#x2713;</span> Custom tools as you grow</li>
+        </ul>
+        <a href="#" class="p-cta open-modal" data-plan="Done For You — $397/mo">Get Started &#x2197;</a>
       </div>
     </div>
-  </section>
+    <p class="p-note"><strong>Need something specific?</strong> Custom builds available. <a href="#" class="open-modal" data-plan="Custom Build" style="color:var(--green)">Tell us what you need</a> &mdash; we&rsquo;ll put together a quote.</p>
+  </div>
+</div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="/" class="nav-logo">
-          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="32" height="32" rx="8" fill="#2563EB"/>
-            <path d="M8 10h10M8 16h16M8 22h12" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-            <circle cx="23" cy="10" r="3" fill="#60A5FA"/>
-          </svg>
-          <span>FieldFlow</span>
-        </a>
-        <p>The operating system for service businesses.</p>
-      </div>
-      <div class="footer-links">
-        <div class="footer-col">
-          <h5>Product</h5>
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="https://demo.fieldflow.app">Live Demo</a>
-        </div>
-        <div class="footer-col">
-          <h5>Industries</h5>
-          <a href="#industries">HVAC</a>
-          <a href="#industries">Plumbing</a>
-          <a href="#industries">Electrical</a>
-          <a href="#industries">All Trades</a>
-        </div>
-        <div class="footer-col">
-          <h5>Company</h5>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-        </div>
-      </div>
+<div class="sec dark" style="text-align:center">
+  <div class="inner-md">
+    <h2 style="color:#fff">Need something<br><em style="font-style:normal;color:#4ade80">built from scratch?</em></h2>
+    <p style="color:rgba(255,255,255,0.65);max-width:580px;margin:0 auto 2.5rem;line-height:1.7">Not every business fits a package. If you need a custom tool, a specific integration, or something you&rsquo;ve never seen anywhere else &mdash; we build that too.</p>
+    <div class="cust-grid">
+      <div class="ci"><div class="ci-icon">&#x1F4CA;</div><h3>Custom Dashboards</h3><p>See your business exactly how you want to see it.</p></div>
+      <div class="ci"><div class="ci-icon">&#x1F517;</div><h3>Integrations</h3><p>Connect your tools &mdash; QuickBooks, Jobber, ServiceTitan, anything.</p></div>
+      <div class="ci"><div class="ci-icon">&#x1F916;</div><h3>AI Agents</h3><p>Custom AI built for exactly how you run your business.</p></div>
+      <div class="ci"><div class="ci-icon">&#x1F4CB;</div><h3>Customer Portals</h3><p>Give clients a place to view jobs, pay invoices, and request service.</p></div>
+      <div class="ci"><div class="ci-icon">&#x1F4F1;</div><h3>Mobile Tools</h3><p>Tools your crew can use in the field, on their phones.</p></div>
+      <div class="ci"><div class="ci-icon">&#x1F4A1;</div><h3>Whatever You Need</h3><p>Tell us the problem. We&rsquo;ll figure out the solution.</p></div>
     </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; 2026 FieldFlow. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+    <a href="#" class="cust-cta open-modal" data-plan="Custom Build">Tell Us What You Need &#x2197;</a>
+    <p class="cust-sub">No obligation. We&rsquo;ll respond within a few hours.</p>
+  </div>
+</div>
 
-  <script src="/src/main.js" type="module"></script>
+<div class="sec" style="text-align:center">
+  <div class="inner-md">
+    <h2>Built for people who work with their hands.</h2>
+    <div class="t-grid">
+      <div class="tc"><p>&ldquo;I didn&rsquo;t even have a Facebook page before. Now I get calls from Google every week. Didn&rsquo;t have to touch any of it.&rdquo;</p><div class="tc-auth">&mdash; Mike, HVAC Contractor</div></div>
+      <div class="tc"><p>&ldquo;They built me a dashboard that shows all my open jobs and invoices. I used to lose track of stuff constantly. Not anymore.&rdquo;</p><div class="tc-auth">&mdash; Dave, Electrician</div></div>
+      <div class="tc"><p>&ldquo;Worth every penny. I used to spend hours a week on this stuff. Now I just do the work and the rest handles itself.&rdquo;</p><div class="tc-auth">&mdash; Tom, Lawn Care</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec alt">
+  <div style="max-width:680px;margin:0 auto">
+    <h2 style="text-align:center">Common questions.</h2>
+    <div class="faq-list">
+      <div class="fi"><h3>Do I need to know anything about tech?</h3><p>No. That&rsquo;s the whole point. You tell us about your business, we handle everything.</p></div>
+      <div class="fi"><h3>How long does setup take?</h3><p>48 hours for the core setup. Custom builds take longer &mdash; we&rsquo;ll give you a clear timeline upfront.</p></div>
+      <div class="fi"><h3>Can I add things later?</h3><p>Yes. Most clients start with a plan and add things as their business grows. We&rsquo;re built for that.</p></div>
+      <div class="fi"><h3>What if I just need one specific thing?</h3><p>Email us. We do one-off custom builds too. No package required.</p></div>
+      <div class="fi"><h3>Can I cancel anytime?</h3><p>Yes. No contracts, no cancellation fees. Just let us know.</p></div>
+      <div class="fi"><h3>What kinds of businesses do you work with?</h3><p>Contractors and local service businesses &mdash; HVAC, electrical, plumbing, lawn care, cleaning, roofing, pest control, painting, and more.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-sec">
+  <h2>Ready to get your business online and organized?</h2>
+  <p>Tell us about your business. We&rsquo;ll have a plan ready within a few hours.</p>
+  <a href="#" class="hero-btn open-modal" data-plan="">Get Started Today &#x2197;</a>
+</div>
+
+<footer>
+  <div class="f-logo">Jobs<span>Done</span></div>
+  <div class="f-links"><a href="mailto:jobsdoneteam@gmail.com">Contact</a><a href="https://x.com/jobs_done_team" target="_blank">Twitter/X</a></div>
+  <p class="f-copy">&copy; 2025 Jobs Done. We upgrade small businesses.</p>
+</footer>
+
+<div id="intake-modal" style="display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:1rem">
+  <div style="background:#fff;border-radius:20px;padding:2.5rem;max-width:520px;width:100%;position:relative;max-height:90vh;overflow-y:auto;box-shadow:0 25px 60px rgba(0,0,0,0.25)">
+    <button onclick="closeModal()" style="position:absolute;top:1.25rem;right:1.25rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:#94a3b8;line-height:1">&times;</button>
+    <div id="modal-form-wrap">
+      <div style="margin-bottom:1.75rem">
+        <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#16a34a;margin-bottom:0.5rem">Let's get started</div>
+        <h2 style="font-size:1.6rem;font-weight:800;letter-spacing:-0.03em;color:#0f172a;margin-bottom:0.5rem">Tell us about your business.</h2>
+        <p style="font-size:0.9rem;color:#64748b;line-height:1.6">We'll put together a plan and reach out within a few hours. No pressure, no obligation.</p>
+      </div>
+      <form id="intake-form" style="display:flex;flex-direction:column;gap:1rem">
+        <input type="hidden" id="modal-plan" name="plan" value="">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+          <div>
+            <label style="font-size:0.8rem;font-weight:600;color:#374151;display:block;margin-bottom:0.35rem">Your Name</label>
+            <input type="text" name="name" required placeholder="Mike Johnson" style="width:100%;padding:0.7rem 0.9rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:0.9rem;font-family:inherit;outline:none" onfocus="this.style.borderColor='#16a34a'" onblur="this.style.borderColor='#e2e8f0'">
+          </div>
+          <div>
+            <label style="font-size:0.8rem;font-weight:600;color:#374151;display:block;margin-bottom:0.35rem">Business Name</label>
+            <input type="text" name="business" required placeholder="Johnson HVAC LLC" style="width:100%;padding:0.7rem 0.9rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:0.9rem;font-family:inherit;outline:none" onfocus="this.style.borderColor='#16a34a'" onblur="this.style.borderColor='#e2e8f0'">
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+          <div>
+            <label style="font-size:0.8rem;font-weight:600;color:#374151;display:block;margin-bottom:0.35rem">Phone</label>
+            <input type="tel" name="phone" required placeholder="(555) 000-0000" style="width:100%;padding:0.7rem 0.9rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:0.9rem;font-family:inherit;outline:none" onfocus="this.style.borderColor='#16a34a'" onblur="this.style.borderColor='#e2e8f0'">
+          </div>
+          <div>
+            <label style="font-size:0.8rem;font-weight:600;color:#374151;display:block;margin-bottom:0.35rem">Email</label>
+            <input type="email" name="email" required placeholder="mike@johnsonhvac.com" style="width:100%;padding:0.7rem 0.9rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:0.9rem;font-family:inherit;outline:none" onfocus="this.style.borderColor='#16a34a'" onblur="this.style.borderColor='#e2e8f0'">
+          </div>
+        </div>
+        <div>
+          <label style="font-size:0.8rem;font-weight:600;color:#374151;display:block;margin-bottom:0.35rem">Industry</label>
+          <select name="industry" required style="width:100%;padding:0.7rem 0.9rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:0.9rem;font-family:inherit;outline:none;background:#fff" onfocus="this.style.borderColor='#16a34a'" onblur="this.style.borderColor='#e2e8f0'">
+            <option value="">Select your trade...</option>
+            <option>HVAC</option>
+            <option>Plumbing</option>
+            <option>Electrical</option>
+            <option>Lawn Care / Landscaping</option>
+            <option>Cleaning</option>
+            <option>Roofing</option>
+            <option>General Contractor</option>
+            <option>Painting</option>
+            <option>Pest Control</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label style="font-size:0.8rem;font-weight:600;color:#374151;display:block;margin-bottom:0.35rem">What's slowing you down most?</label>
+          <select name="need" style="width:100%;padding:0.7rem 0.9rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:0.9rem;font-family:inherit;outline:none;background:#fff" onfocus="this.style.borderColor='#16a34a'" onblur="this.style.borderColor='#e2e8f0'">
+            <option value="">Select one...</option>
+            <option>Missing leads / no follow-up system</option>
+            <option>No website or weak online presence</option>
+            <option>Chasing payments and invoices</option>
+            <option>No reviews or slow review growth</option>
+            <option>Scheduling and booking chaos</option>
+            <option>No dashboard or visibility into the business</option>
+            <option>Social media / content takes too long</option>
+            <option>Not sure — just want to talk</option>
+          </select>
+        </div>
+        <div>
+          <label style="font-size:0.8rem;font-weight:600;color:#374151;display:block;margin-bottom:0.35rem">Anything else we should know? <span style="font-weight:400;color:#94a3b8">(optional)</span></label>
+          <textarea name="message" rows="3" placeholder="Tell us a bit about your business and what you're looking for..." style="width:100%;padding:0.7rem 0.9rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:0.9rem;font-family:inherit;outline:none;resize:vertical" onfocus="this.style.borderColor='#16a34a'" onblur="this.style.borderColor='#e2e8f0'"></textarea>
+        </div>
+        <button type="submit" style="background:#16a34a;color:#fff;font-weight:700;font-size:1rem;border:none;border-radius:10px;padding:1rem;cursor:pointer;font-family:inherit;margin-top:0.25rem">Let's Talk &#x2197;</button>
+        <p style="font-size:0.78rem;color:#94a3b8;text-align:center">No obligation. We usually respond within a few hours.</p>
+      </form>
+    </div>
+    <div id="modal-success" style="display:none;text-align:center;padding:2rem 0">
+      <div style="font-size:3rem;margin-bottom:1rem">&#x2705;</div>
+      <h2 style="font-size:1.5rem;font-weight:800;color:#0f172a;margin-bottom:0.75rem">Got it!</h2>
+      <p style="color:#64748b;line-height:1.7;margin-bottom:1.5rem">We'll reach out within a few hours to talk through what makes sense for your business.</p>
+      <button onclick="closeModal()" style="background:#0f172a;color:#fff;font-weight:700;font-size:0.95rem;border:none;border-radius:10px;padding:0.85rem 2rem;cursor:pointer;font-family:inherit">Done</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('intake-modal');
+  const planInput = document.getElementById('modal-plan');
+
+  function openModal(plan) {
+    planInput.value = plan || '';
+    document.getElementById('modal-form-wrap').style.display = 'block';
+    document.getElementById('modal-success').style.display = 'none';
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.open-modal').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      openModal(btn.dataset.plan || '');
+    });
+  });
+
+  modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  document.getElementById('intake-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const data = new FormData(this);
+    const fields = Object.fromEntries(data.entries());
+
+    try {
+      const res = await fetch('/api/leads', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(fields)
+      });
+      if (!res.ok) throw new Error('no endpoint');
+    } catch {
+      const body = encodeURIComponent(
+        `Name: ${fields.name}\nBusiness: ${fields.business}\nPhone: ${fields.phone}\nEmail: ${fields.email}\nIndustry: ${fields.industry}\nNeed: ${fields.need}\nPlan: ${fields.plan}\nMessage: ${fields.message || 'N/A'}`
+      );
+      window.location.href = `mailto:jobsdoneteam@gmail.com?subject=New Lead: ${encodeURIComponent(fields.business)}&body=${body}`;
+    }
+
+    document.getElementById('modal-form-wrap').style.display = 'none';
+    document.getElementById('modal-success').style.display = 'block';
+  });
+
+  // Example carousel
+  const exTabs = document.querySelectorAll('.ex-tab');
+  const exSlides = document.querySelectorAll('.ex-slide');
+
+  exTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const slideIndex = tab.dataset.slide;
+      
+      exTabs.forEach(t => t.classList.remove('active'));
+      exSlides.forEach(s => s.classList.remove('active'));
+      
+      tab.classList.add('active');
+      document.querySelector(`.ex-slide[data-slide="${slideIndex}"]`).classList.add('active');
+    });
+  });
+</script>
+
 </body>
 </html>
