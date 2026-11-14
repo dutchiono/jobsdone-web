@@ -10,6 +10,7 @@ export default defineConfig({
         jobsDone: resolve(import.meta.dirname ?? process.cwd(), 'index.html'),
         mionoStudio: resolve(import.meta.dirname ?? process.cwd(), 'studio/index.html'),
         templates: resolve(import.meta.dirname ?? process.cwd(), 'templates/index.html'),
+        automation: resolve(import.meta.dirname ?? process.cwd(), 'automation/index.html'),
       },
     },
   },
