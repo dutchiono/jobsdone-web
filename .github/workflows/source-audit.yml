@@ -1,0 +1,29 @@
+name: Audit entire public repository portfolio
+
+on:
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Inspect all public repositories (read only)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/audit-public.mjs
+      - name: Publish assessment artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: miono-public-source-audit
+          path: .audit-output/
+          if-no-files-found: error
