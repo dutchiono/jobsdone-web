@@ -1,3 +1,9 @@
+> ## When you get home: start here
+> **[One-session launch + consolidation checklist](docs/HOME-SESSION-RUNBOOK.md)**
+> All checkboxes, commands, preflight, stop conditions, production backup/rollback, staging, DNS/TLS, cleanup batches and post-launch work are in that single runbook.
+> `bash scripts/home-preflight.sh` before any production change. `bash scripts/check-live-sites.sh` only after launching.
+> **Current release status: NOT DEPLOYED.** Don't merge into master until the canonical deployment source is established.
+>
 # Jobs Done — small-business websites and systems
 *A commercial product by Miono Studio.*
 
