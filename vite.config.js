@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import { resolve } from 'node:path'
 
 export default defineConfig({
   root: '.',
@@ -6,7 +7,8 @@ export default defineConfig({
     outDir: 'dist',
     rollupOptions: {
       input: {
-        main: './index.html',
+        jobsDone: resolve(import.meta.dirname ?? process.cwd(), 'index.html'),
+        mionoStudio: resolve(import.meta.dirname ?? process.cwd(), 'studio/index.html'),
       },
     },
   },
