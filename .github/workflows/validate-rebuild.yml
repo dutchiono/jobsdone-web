@@ -18,6 +18,12 @@ jobs:
       - run: npm run build
       - name: Validate built sites and migrated features
         run: node tests/validate.mjs
+      - name: Validate operational scripts and runbook
+        run: |
+          bash -n scripts/home-preflight.sh
+          bash -n scripts/server-readonly-inventory.sh
+          bash -n scripts/check-live-sites.sh
+          test -s docs/HOME-SESSION-RUNBOOK.md
       - name: Check static preview hosting readiness (non-blocking)
         continue-on-error: true
         env:
