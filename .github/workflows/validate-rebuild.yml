@@ -18,16 +18,6 @@ jobs:
       - run: npm run build
       - name: Validate built sites and migrated features
         run: node tests/validate.mjs
-      - name: Try to configure Pages for public preview (non-blocking)
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          if gh api "repos/${GITHUB_REPOSITORY}/pages" >/dev/null 2>&1; then
-            echo "Pages already enabled."
-          else
-            gh api -X POST "repos/${GITHUB_REPOSITORY}/pages" -f build_type=workflow >/dev/null && echo "Pages enabled." || echo "This token cannot enable Pages; repo administrator needs to configure Pages."
-          fi
       - name: Check static preview hosting readiness (non-blocking)
         continue-on-error: true
         env:
