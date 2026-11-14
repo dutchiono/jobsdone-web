@@ -20,9 +20,15 @@ jobs:
         run: |
           test -s dist/index.html
           test -s dist/studio/index.html
+          test -s dist/templates/index.html
+          test -s dist/data/repositories.json
           test -s dist/data/projects.json
           test -s dist/shared.css
           node --input-type=module -e "import{readFileSync}from'node:fs'; const d=JSON.parse(readFileSync('dist/data/projects.json')); if(d.projects.length<10)process.exit(1); for(const p of d.projects){if(!p.id||!p.title||!p.status||!p.links?.[0]?.url)process.exit(1)}"
+      - name: Verify inventory and industry template migration
+        run: |
+          node --input-type=module -e "import{readFileSync}from'node:fs'; const x=JSON.parse(readFileSync('dist/data/repositories.json')); if(x.entries.length!==114)throw Error('Public inventory is incomplete'); const names=new Set(x.entries.map(r=>r.repo)); if(names.size!==x.entries.length)throw Error('Duplicate repository identities'); if(x.entries.some(r=>!r.url.startsWith('https://github.com/')))throw Error('Invalid repo URL')"
+          node --input-type=module -e "import{readFileSync}from'node:fs'; const x=readFileSync('dist/templates/index.html','utf8'); for(const s of ['id=\\\"industry\\\"','id=\\\"business\\\"','id=\\\"preview\\\"']) if(!x.includes(s))throw Error('Template preview missing '+s)"
       - name: Package reviewable website preview
         uses: actions/upload-artifact@v4
         with:
