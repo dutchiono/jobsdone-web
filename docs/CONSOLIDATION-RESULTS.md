@@ -63,3 +63,24 @@ Updated: 2026-11-14. Working implementation record, not a marketing deck.
 3. Inspect remaining source trees and actual original contributions, especially fork changes; assign a target home to every repo.
 4. Prepare verified Miono case studies and privacy-safe demos, rather than treating repo names as marketing claims.
 5. Archive superseded docs-only repos selectively, after confirming that the consolidated copies cover their useful assets.
+
+
+## Cross-repository byte-identical source scan (2026-11-14)
+GitHub Actions [run #43648561916](https://github.com/dutchiono/jobsdone-web/actions/runs/43648561916) inspected the recursive public source trees of 114 repositories. It found five pairs with at least five byte-identical non-generated source files, excluding common README/assets/lockfiles. One empty repository (`bagsscanner`) returned HTTP 409, which does not represent a failed source read of existing code.
+
+| Pair | Byte-identical source files | Practical disposition |
+| --- | ---: | --- |
+| dutchiono/milady ↔ milady-ai/milady | 49 | **Upstream/fork relation; review contribution diff, retain provenance** |
+| dutchiono/cache-bar ↔ dutchiono/dotcache-james | 20 | **Intentional designer lane**, not arbitrary duplicate. Keep isolation and reusable template source in cache-bar/Bushleague. |
+| dutchiono/bot-foundry ↔ dutchiono/dotcache-builder | 6 | **Extract/shared core candidate**. Dotcache-specific Convex/lane frontend remains a specialization; Bot Foundry is a generic pipeline reference. |
+| dutchiono/coveragedesk ↔ dutchiono/markbets | 5 | **Shared market-data backend candidate**; isolate financial/token-specific features and validate tests before merging. |
+| dutchiono/plugin-anthropic ↔ dutchiono/plugin-google-genai | 5 | **Provider adapter similarity**; inspect upstream licensing and provider-specific semantics before reusing. |
+
+Additional private-owned pair inspected separately: `feather-app` and `stablecharts` have different code blobs for the 170KB+ radar server module but approximately 95% of their unique source lines appear in both. This approximate figure is line-set overlap, not a proven identical codebase. Keep private implementation details out of public pages.
+
+The scan is machine reproducible in `scripts/find-duplicates.mjs` with JSON and Markdown Actions artifacts. The result is a **candidate map for reducing duplicate code** rather than authorization to delete any source repository.
+
+## Hosting verification (2026-11-14)
+- GitHub CI successfully built and validated the Jobs Done + Miono + template + automation pages.
+- GitHub Pages API returned HTTP 404 for `dutchiono/jobsdone-web` from Actions, and `https://dutchiono.github.io/jobsdone-web/` returned HTTP 404. Pages is not enabled, or is inaccessible to the token. **No hosted preview URL may be advertised yet.**
+- Production Miono host is marked unavailable in Gateway and the connector lacks write access to `jobsdoneteam/jobsdone-web` (GitHub branch creation returned 403).
