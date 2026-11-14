@@ -32,6 +32,6 @@ fetch('/data/projects.json').then(r=>{if(!r.ok)throw Error('Project catalog unav
  const projects=d.projects.filter(x=>x.forBusiness&&x.id!=='ionoi-sites');
  document.getElementById('business-projects').innerHTML=projects.map(x=>'<article class="project"><div class="meta">'+esc(x.type)+'</div><b>'+esc(x.title)+'</b><p>'+esc(x.summary)+'</p><small>'+esc(x.status)+'</small><div class="foot"><a href="'+esc(x.links[0].url)+'" target="_blank" rel="noopener noreferrer">Inspect evidence ↗</a></div></article>').join('');
 }).catch(e=>document.getElementById('business-projects').textContent=e.message);
-document.getElementById('inquiry').addEventListener('submit',e=>{e.preventDefault();const d=new FormData(e.currentTarget);const subj='Jobs Done inquiry — '+String(d.get('business'));const body='Name: '+d.get('name')+'\nBusiness: '+d.get('business')+'\nService: '+d.get('service')+'\n\n'+d.get('message');location.href='mailto:miono@agentmail.to?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body)});
+document.getElementById('inquiry').addEventListener('submit',e=>{e.preventDefault();const d=new FormData(e.currentTarget);const subj='Jobs Done inquiry — '+String(d.get('business'));const body='Name: '+d.get('name')+'\nBusiness: '+d.get('business')+'\nService: '+d.get('service')+'\n\n'+d.get('message');location.href='mailto:jobsdoneteam@gmail.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body)});
 </script>
 </body></html>
