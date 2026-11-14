@@ -1,8 +1,6 @@
 name: Audit entire public repository portfolio
 
 on:
-  pull_request:
-    branches: [master]
   workflow_dispatch:
 
 permissions:
