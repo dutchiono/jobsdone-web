@@ -78,8 +78,8 @@ const aggregate={scanned:rows.length,readme:rows.filter(x=>x.readme).length,with
  byCategory:Object.fromEntries([...new Set(rows.map(x=>x.category))].map(c=>[c,rows.filter(x=>x.category===c).length]))};
 const keys=['repo','url','owner','category','fork','archived','language','license','pushedAt','readmeTitle','manifests','sourceIndicators','signals','errors'];
 const csv=[keys.map(csvCell).join(','),...rows.map(x=>keys.map(k=>csvCell(x[k])).join(','))].join('\n')+'\n';
-await mkdir('.audit-output',{recursive:true});
-await writeFile('.audit-output/public-source-audit.json',JSON.stringify({schema:'miono.public-source-audit.v1',generatedAt:new Date().toISOString(),aggregate,rows},null,2)+'\n');
-await writeFile('.audit-output/public-source-audit.csv',csv);
-await writeFile('.audit-output/SUMMARY.md',`# Public GitHub source-level scan\n\n- Repositories: ${aggregate.scanned}\n- README detected: ${aggregate.readme}\n- Root app manifest detected: ${aggregate.withManifest}\n- No conventional root source: ${aggregate.noConventionalRootSource}\n- Forks: ${aggregate.forkCount}\n- Read errors: ${aggregate.withErrors}\n\nSource inspection is limited to root listings and README text. No execution, dependency resolution, security assessment, or individual-contribution verification was performed.\n`);
+await mkdir('audit-output',{recursive:true});
+await writeFile('audit-output/public-source-audit.json',JSON.stringify({schema:'miono.public-source-audit.v1',generatedAt:new Date().toISOString(),aggregate,rows},null,2)+'\n');
+await writeFile('audit-output/public-source-audit.csv',csv);
+await writeFile('audit-output/SUMMARY.md',`# Public GitHub source-level scan\n\n- Repositories: ${aggregate.scanned}\n- README detected: ${aggregate.readme}\n- Root app manifest detected: ${aggregate.withManifest}\n- No conventional root source: ${aggregate.noConventionalRootSource}\n- Forks: ${aggregate.forkCount}\n- Read errors: ${aggregate.withErrors}\n\nSource inspection is limited to root listings and README text. No execution, dependency resolution, security assessment, or individual-contribution verification was performed.\n`);
 console.log(JSON.stringify(aggregate,null,2));
