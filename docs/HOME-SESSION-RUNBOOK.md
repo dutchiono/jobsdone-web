@@ -62,7 +62,7 @@ This phase is mostly **read-only**. Use your preferred SSH terminal (Windows Pow
 - [ ] **B1** In GitHub, inspect [Jobs Done PR #2](https://github.com/dutchiono/jobsdone-web/pull/2), [CI runs](https://github.com/dutchiono/jobsdone-web/actions), and current deployment workflow; note last green SHA.
 - [ ] **B2** Run the checked-in local report: `bash scripts/home-preflight.sh` (on Windows, use Git Bash or WSL), after cloning the feature branch. It does not mutate production.
 - [ ] **B3** Restore SSH/Gateway access and verify the correct user/host key. The registered Miono host was `SERVER_NOT_READY`; do not guess the root password or disable authentication.
-- [ ] **B4** On the server, gather bounded, **non-secret** facts:
+- [ ] **B4** On the server, run the **read-only** discovery helper `bash scripts/server-readonly-inventory.sh` from your local checkout or a safely transferred copy, then gather any missing non-secret facts. Do not execute it before validating you are on the correct server. Record results privately. The following manual commands supplement the helper:
   ```bash
   hostnamectl 2>/dev/null || hostname
   date -Is
