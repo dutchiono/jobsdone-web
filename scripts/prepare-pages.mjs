@@ -3,7 +3,7 @@
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
 const prefix='/jobsdone-web'
-const roots=['/shared.css','/data/','/src/','/studio/','/templates/','/automation/']
+const roots=['/shared.css','/data/','/src/','/assets/','/studio/','/templates/','/automation/']
 function visit(dir){
  for(const e of readdirSync(dir,{withFileTypes:true})){
   const file=join(dir,e.name)
