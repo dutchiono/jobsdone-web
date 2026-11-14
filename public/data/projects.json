@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "lastReviewed": "2026-11-14",
+  "editorialPolicy": "Status and authorship are qualified; public projects only. Private repositories are excluded.",
+  "projects": [
+    {
+      "id": "jobs-done",
+      "title": "Jobs Done",
+      "category": "Business systems",
+      "type": "Product",
+      "status": "Website source verified; live deployment unverified",
+      "summary": "Small-business web presence and growth platform: website, marketing strategy, operational workflows.",
+      "role": "Project repository under dutchiono; specific contributions not audited",
+      "links": [
+        {
+          "label": "Website source",
+          "url": "https://github.com/dutchiono/jobsdone-web"
+        },
+        {
+          "label": "Growth strategy",
+          "url": "https://github.com/dutchiono/jobsdone-growth"
+        }
+      ],
+      "featured": true,
+      "forBusiness": true
+    },
+    {
+      "id": "m-jacob-hvac",
+      "title": "M. Jacob HVAC strategy",
+      "category": "Business systems",
+      "type": "Research",
+      "status": "Documented strategy; implementation unverified",
+      "summary": "Pittsburgh-area HVAC search, customer acquisition, local SEO and advertising plan developed within the Jobs Done ecosystem.",
+      "role": "Marketing strategy documented in repository",
+      "links": [
+        {
+          "label": "Strategy",
+          "url": "https://github.com/dutchiono/m-jacob-hvac-marketing-strategy"
+        }
+      ],
+      "featured": true,
+      "forBusiness": true
+    },
+    {
+      "id": "ionoi-sites",
+      "title": "ionoi-sites",
+      "category": "Business systems",
+      "type": "Concept",
+      "status": "README roadmap; no root application manifest found",
+      "summary": "Business-site builder concept covering local-industry templates, mobile-first design, payments and publishing. Candidate for migration into Jobs Done.",
+      "role": "Product concept documented; implementation requires audit",
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/dutchiono/ionoi-sites"
+        }
+      ],
+      "featured": false,
+      "forBusiness": true
+    },
+    {
+      "id": "bot-foundry",
+      "title": "Bot Foundry",
+      "category": "AI & agents",
+      "type": "Application",
+      "status": "TypeScript source and package scripts found; runtime unverified",
+      "summary": "Telegram-based bot generator with an orchestrated build and review pipeline powered by OpenCode.",
+      "role": "Repository contribution and provenance require review",
+      "links": [
+        {
+          "label": "Source",
+          "url": "https://github.com/dutchiono/bot-foundry"
+        }
+      ],
+      "featured": true,
+      "forBusiness": false
+    },
+    {
+      "id": "bushleague-hosting",
+      "title": "Bushleague Hosting",
+      "category": "Infrastructure",
+      "type": "Infrastructure",
+      "status": "Provisioning documentation verified; production not independently tested",
+      "summary": "Isolated designer deployment lanes, subdomains and repeatable infrastructure provisioning.",
+      "role": "Hosting and deployment documentation",
+      "links": [
+        {
+          "label": "Documentation",
+          "url": "https://github.com/dutchiono/bushleague-hosting"
+        }
+      ],
+      "featured": true,
+      "forBusiness": false
+    },
+    {
+      "id": "tavernkeeper",
+      "title": "TavernKeeper",
+      "category": "Interactive",
+      "type": "Application",
+      "status": "Agent RPG source and API documentation reviewed; live status unverified",
+      "summary": "Agent-native roleplaying world with parties, game state, a dungeon engine and API-driven participation.",
+      "role": "Repository contribution requires review",
+      "links": [
+        {
+          "label": "Source",
+          "url": "https://github.com/dutchiono/TavernKeeper"
+        }
+      ],
+      "featured": true,
+      "forBusiness": false
+    },
+    {
+      "id": "goodicecream",
+      "title": "Good Ice Cream",
+      "category": "Interactive",
+      "type": "Application",
+      "status": "Vite and TypeScript browser-game layout verified",
+      "summary": "Interactive browser game with custom game state, customer flows and UI.",
+      "role": "Project role requires review",
+      "links": [
+        {
+          "label": "Source",
+          "url": "https://github.com/dutchiono/goodicecream"
+        }
+      ],
+      "featured": true,
+      "forBusiness": false
+    },
+    {
+      "id": "family-tree",
+      "title": "Family Tree",
+      "category": "Interactive",
+      "type": "Data visualization",
+      "status": "Viewer and transcribed-data structure documented; private details withheld",
+      "summary": "Large explorable genealogy viewer with searchable relationships, zoom controls and source provenance.",
+      "role": "Project role requires review",
+      "links": [
+        {
+          "label": "Source",
+          "url": "https://github.com/dutchiono/Egan-family-tree"
+        }
+      ],
+      "featured": false,
+      "forBusiness": false
+    },
+    {
+      "id": "feather",
+      "title": "Feather",
+      "category": "Markets & Web3",
+      "type": "Prototype",
+      "status": "README: dashboard works; trade execution incomplete",
+      "summary": "Solana pool monitoring, dashboard controls and encrypted local wallet storage.",
+      "role": "Trading project role requires review",
+      "links": [
+        {
+          "label": "Source",
+          "url": "https://github.com/dutchiono/feather"
+        }
+      ],
+      "featured": true,
+      "forBusiness": false
+    },
+    {
+      "id": "agent-risk",
+      "title": "Agent Risk",
+      "category": "Interactive",
+      "type": "Prototype",
+      "status": "Game engine/API architecture documented; deployment unverified",
+      "summary": "Turn-based strategy game with agent API, multiplayer lobbies and spectators.",
+      "role": "Project role requires review",
+      "links": [
+        {
+          "label": "Source",
+          "url": "https://github.com/dutchiono/agent-risk"
+        }
+      ],
+      "featured": false,
+      "forBusiness": false
+    },
+    {
+      "id": "bnkr-nft",
+      "title": "BNKR NFT Scaffold",
+      "category": "Markets & Web3",
+      "type": "Research",
+      "status": "Explicitly not deployed in README",
+      "summary": "Multi-transaction ERC-20 and NFT deployment workflow research.",
+      "role": "Workflow and documentation",
+      "links": [
+        {
+          "label": "Source",
+          "url": "https://github.com/dutchiono/BNKR-NFT-SCAFFOLD"
+        }
+      ],
+      "featured": false,
+      "forBusiness": false
+    },
+    {
+      "id": "architects",
+      "title": "Architects and Agents",
+      "category": "AI & agents",
+      "type": "Architecture",
+      "status": "Consolidated technical design documentation",
+      "summary": "System design patterns for business functions and specialized agents.",
+      "role": "Architecture documentation",
+      "links": [
+        {
+          "label": "Documentation",
+          "url": "https://github.com/dutchiono/architects-and-agents"
+        }
+      ],
+      "featured": false,
+      "forBusiness": false
+    }
+  ]
+}
