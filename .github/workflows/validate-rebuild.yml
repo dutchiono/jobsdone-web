@@ -18,6 +18,17 @@ jobs:
       - run: npm run build
       - name: Validate built sites and migrated features
         run: node tests/validate.mjs
+      - name: Check static preview hosting readiness (non-blocking)
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh api "repos/${GITHUB_REPOSITORY}/pages" --jq '{status: .status, html_url: .html_url, source: .source}' ; then
+            echo "GitHub Pages configuration is available."
+          else
+            echo "Pages is not configured or is not readable by this token; no public live URL may be claimed."
+          fi
+          curl -sS -L -o /dev/null -w 'Public preview URL response: %{http_code}\n' --max-time 12 https://dutchiono.github.io/jobsdone-web/ || true
       - name: Package reviewable website preview
         uses: actions/upload-artifact@v4
         with:
