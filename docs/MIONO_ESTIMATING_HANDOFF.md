@@ -52,3 +52,9 @@ Client portal; trainer dashboard; per-client training/nutrition/habit sheets; on
 ## Do not
 
 Do not call a localStorage quote an invoice. Do not implement payment collection in the public GitHub Pages demo. Do not claim hosting has an uptime guarantee without an SLA. Do not quote a fixed project price until requirements and acceptance tests are agreed. Do not create another repository just to hold a copy of this handoff.
+
+## Implemented customer-facing cost spreadsheet (2026-11-24)
+
+The trainer demo now has a **Trainer → Cost options** page with a customer-facing editable table. This is the primary requested UI, ahead of invoicing or payment integrations. It includes include/exclude checkboxes, editable option names/descriptions, unit prices, quantities, subtotals, live total, one-month/twelve-month quantity presets, custom rows, copy and print, and local browser persistence. Baseline $5/month hosting is preselected; domain, video, email, storage and maintenance are OPTIONAL and off by default. The fixed build line is editable rather than inventing a customer bid. The separate Proposal page is secondary.
+
+Jobs Done integration should reproduce this **spreadsheet-style option selector** as the reusable Miono module, preserving low-friction customer clarity. Do not make speculative cost warnings the main interface; optional costs should be plainly visible, selectable and priced. No video requirement is imposed on this bid. Do not automatically bundle video with hosting. See https://github.com/dutchiono/trainerdemo1/blob/main/index.html and the Cost options page in Trainer mode.
