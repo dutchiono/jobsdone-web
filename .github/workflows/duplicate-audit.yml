@@ -1,0 +1,26 @@
+name: Cross-repository code duplication audit
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  duplicates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Audit source blobs in all public repositories
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/find-duplicates.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: miono-source-duplication-audit
+          path: duplicate-audit-output/
+          if-no-files-found: error

@@ -1,0 +1,1033 @@
+{
+  "date": "2026-11-14",
+  "scope": "Public repositories accessible from connected GitHub accounts. Not complete source audits.",
+  "count": 114,
+  "entries": [
+    {
+      "repo": "dutchiono/.github",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 0,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/.github"
+    },
+    {
+      "repo": "dutchiono/Agent-Reach",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 1547,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/Agent-Reach"
+    },
+    {
+      "repo": "dutchiono/agent-risk",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 43,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/agent-risk"
+    },
+    {
+      "repo": "dutchiono/ai-agent-capabilities-demo",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 827,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/ai-agent-capabilities-demo"
+    },
+    {
+      "repo": "dutchiono/api-gateway-architect",
+      "category": "Infrastructure",
+      "defaultBranch": "main",
+      "approxKiB": 31,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/api-gateway-architect"
+    },
+    {
+      "repo": "dutchiono/architects-and-agents",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 8,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/architects-and-agents"
+    },
+    {
+      "repo": "dutchiono/babylon",
+      "category": "Markets & Web3",
+      "defaultBranch": "staging-new",
+      "approxKiB": 320598,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/babylon"
+    },
+    {
+      "repo": "dutchiono/bagsscanner",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 0,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/bagsscanner"
+    },
+    {
+      "repo": "dutchiono/beads",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 120601,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/beads"
+    },
+    {
+      "repo": "dutchiono/billing-system-architect",
+      "category": "Business systems",
+      "defaultBranch": "main",
+      "approxKiB": 6,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/billing-system-architect"
+    },
+    {
+      "repo": "dutchiono/BNKR-NFT-SCAFFOLD",
+      "category": "Markets & Web3",
+      "defaultBranch": "main",
+      "approxKiB": 57,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/BNKR-NFT-SCAFFOLD"
+    },
+    {
+      "repo": "dutchiono/bot-foundry",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 164,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/bot-foundry"
+    },
+    {
+      "repo": "dutchiono/bushleague-hosting",
+      "category": "Infrastructure",
+      "defaultBranch": "main",
+      "approxKiB": 26,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/bushleague-hosting"
+    },
+    {
+      "repo": "dutchiono/cache-bar",
+      "category": "Infrastructure",
+      "defaultBranch": "main",
+      "approxKiB": 38706,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/cache-bar"
+    },
+    {
+      "repo": "dutchiono/claude-toolbox",
+      "category": "AI & developer tools",
+      "defaultBranch": "master",
+      "approxKiB": 4895,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/claude-toolbox"
+    },
+    {
+      "repo": "dutchiono/clawdug",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 36,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/clawdug"
+    },
+    {
+      "repo": "dutchiono/cli",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 9613,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/cli"
+    },
+    {
+      "repo": "dutchiono/cloud",
+      "category": "Infrastructure",
+      "defaultBranch": "dev",
+      "approxKiB": 1134691,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/cloud"
+    },
+    {
+      "repo": "dutchiono/community-integrated-system",
+      "category": "Business systems",
+      "defaultBranch": "main",
+      "approxKiB": 6,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/community-integrated-system"
+    },
+    {
+      "repo": "dutchiono/content-integrated-system",
+      "category": "Business systems",
+      "defaultBranch": "main",
+      "approxKiB": 5,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/content-integrated-system"
+    },
+    {
+      "repo": "dutchiono/coveragedesk",
+      "category": "Markets & Web3",
+      "defaultBranch": "main",
+      "approxKiB": 1741,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/coveragedesk"
+    },
+    {
+      "repo": "dutchiono/cryptoart-social",
+      "category": "Markets & Web3",
+      "defaultBranch": "main",
+      "approxKiB": 5539,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/cryptoart-social"
+    },
+    {
+      "repo": "dutchiono/customer-experience-system-architect",
+      "category": "Business systems",
+      "defaultBranch": "main",
+      "approxKiB": 7,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/customer-experience-system-architect"
+    },
+    {
+      "repo": "dutchiono/database-architect",
+      "category": "Infrastructure",
+      "defaultBranch": "main",
+      "approxKiB": 38,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/database-architect"
+    },
+    {
+      "repo": "dutchiono/deployment-architect",
+      "category": "Infrastructure",
+      "defaultBranch": "main",
+      "approxKiB": 26,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/deployment-architect"
+    },
+    {
+      "repo": "dutchiono/dexabin",
+      "category": "Markets & Web3",
+      "defaultBranch": "dutch-snapshot",
+      "approxKiB": 16,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/dexabin"
+    },
+    {
+      "repo": "dutchiono/Digipets",
+      "category": "Interactive",
+      "defaultBranch": "main",
+      "approxKiB": 17,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/Digipets"
+    },
+    {
+      "repo": "dutchiono/docs",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 356,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/docs"
+    },
+    {
+      "repo": "dutchiono/dotcache-builder",
+      "category": "Infrastructure",
+      "defaultBranch": "main",
+      "approxKiB": 89,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/dotcache-builder"
+    },
+    {
+      "repo": "dutchiono/dotcache-james",
+      "category": "Infrastructure",
+      "defaultBranch": "main",
+      "approxKiB": 22043,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/dotcache-james"
+    },
+    {
+      "repo": "dutchiono/drink-miono-live",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 24225,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/drink-miono-live"
+    },
+    {
+      "repo": "dutchiono/Drown",
+      "category": "Interactive",
+      "defaultBranch": "master",
+      "approxKiB": 192,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/Drown"
+    },
+    {
+      "repo": "dutchiono/dutchiono",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 17,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/dutchiono"
+    },
+    {
+      "repo": "dutchiono/Egan-family-tree",
+      "category": "Interactive",
+      "defaultBranch": "main",
+      "approxKiB": 2257,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/Egan-family-tree"
+    },
+    {
+      "repo": "dutchiono/eliza-upstream",
+      "category": "AI & developer tools",
+      "defaultBranch": "develop",
+      "approxKiB": 3115623,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/eliza-upstream"
+    },
+    {
+      "repo": "dutchiono/elizameter",
+      "category": "AI & developer tools",
+      "defaultBranch": "init",
+      "approxKiB": 11,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/elizameter"
+    },
+    {
+      "repo": "dutchiono/feydocs.lat",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 79996,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/feydocs.lat"
+    },
+    {
+      "repo": "dutchiono/fsm-demo",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 1236,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/fsm-demo"
+    },
+    {
+      "repo": "dutchiono/game-node",
+      "category": "Interactive",
+      "defaultBranch": "main",
+      "approxKiB": 173,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/game-node"
+    },
+    {
+      "repo": "dutchiono/gastown",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 38376,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/gastown"
+    },
+    {
+      "repo": "dutchiono/gitclaw",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 604,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/gitclaw"
+    },
+    {
+      "repo": "dutchiono/goodicecream",
+      "category": "Interactive",
+      "defaultBranch": "main",
+      "approxKiB": 7475,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/goodicecream"
+    },
+    {
+      "repo": "dutchiono/happy-hypatia",
+      "category": "Other / needs review",
+      "defaultBranch": "master",
+      "approxKiB": 123,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/happy-hypatia"
+    },
+    {
+      "repo": "dutchiono/headroom",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 47567,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/headroom"
+    },
+    {
+      "repo": "dutchiono/homunculus",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 2233,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/homunculus"
+    },
+    {
+      "repo": "dutchiono/housing-designer",
+      "category": "Interactive",
+      "defaultBranch": "main",
+      "approxKiB": 10,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/housing-designer"
+    },
+    {
+      "repo": "dutchiono/hr-system-architect",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 10,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/hr-system-architect"
+    },
+    {
+      "repo": "dutchiono/hyperbet",
+      "category": "Markets & Web3",
+      "defaultBranch": "main",
+      "approxKiB": 4900,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/hyperbet"
+    },
+    {
+      "repo": "dutchiono/hyperscape",
+      "category": "Interactive",
+      "defaultBranch": "main",
+      "approxKiB": 338204,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/hyperscape"
+    },
+    {
+      "repo": "dutchiono/iono-explainer",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 2,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/iono-explainer"
+    },
+    {
+      "repo": "dutchiono/ionoi-sites",
+      "category": "Business systems",
+      "defaultBranch": "main",
+      "approxKiB": 8,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/ionoi-sites"
+    },
+    {
+      "repo": "dutchiono/ionoi.eth.sucks",
+      "category": "Infrastructure",
+      "defaultBranch": "main",
+      "approxKiB": 236,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/ionoi.eth.sucks"
+    },
+    {
+      "repo": "dutchiono/jobsdone-growth",
+      "category": "Business systems",
+      "defaultBranch": "main",
+      "approxKiB": 34,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/jobsdone-growth"
+    },
+    {
+      "repo": "dutchiono/jobsdone-web",
+      "category": "Business systems",
+      "defaultBranch": "master",
+      "approxKiB": 153,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/jobsdone-web"
+    },
+    {
+      "repo": "dutchiono/m-jacob-hvac-marketing-strategy",
+      "category": "Business systems",
+      "defaultBranch": "main",
+      "approxKiB": 12,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/m-jacob-hvac-marketing-strategy"
+    },
+    {
+      "repo": "dutchiono/markbets",
+      "category": "Markets & Web3",
+      "defaultBranch": "main",
+      "approxKiB": 184,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/markbets"
+    },
+    {
+      "repo": "dutchiono/marketplace-integrated-system",
+      "category": "Business systems",
+      "defaultBranch": "main",
+      "approxKiB": 22,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/marketplace-integrated-system"
+    },
+    {
+      "repo": "dutchiono/MaxIndex",
+      "category": "Markets & Web3",
+      "defaultBranch": "main",
+      "approxKiB": 12,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/MaxIndex"
+    },
+    {
+      "repo": "dutchiono/milady",
+      "category": "AI & developer tools",
+      "defaultBranch": "develop",
+      "approxKiB": 732220,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/milady"
+    },
+    {
+      "repo": "dutchiono/mirrorstage",
+      "category": "Interactive",
+      "defaultBranch": "main",
+      "approxKiB": 197,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/mirrorstage"
+    },
+    {
+      "repo": "dutchiono/monitoring-architect",
+      "category": "Infrastructure",
+      "defaultBranch": "main",
+      "approxKiB": 29,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/monitoring-architect"
+    },
+    {
+      "repo": "dutchiono/nanemini",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 2446,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/nanemini"
+    },
+    {
+      "repo": "dutchiono/not-claude-code-emulator",
+      "category": "AI & developer tools",
+      "defaultBranch": "master",
+      "approxKiB": 811,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/not-claude-code-emulator"
+    },
+    {
+      "repo": "dutchiono/nullpriest",
+      "category": "Other / needs review",
+      "defaultBranch": "master",
+      "approxKiB": 3367,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/nullpriest"
+    },
+    {
+      "repo": "dutchiono/openclaw-distributed-compute",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 54,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/openclaw-distributed-compute"
+    },
+    {
+      "repo": "dutchiono/openclaws",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 153,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/openclaws"
+    },
+    {
+      "repo": "dutchiono/org-updates",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 3,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/org-updates"
+    },
+    {
+      "repo": "dutchiono/pickle-rick-extension",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 7529,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/pickle-rick-extension"
+    },
+    {
+      "repo": "dutchiono/plugin-anthropic",
+      "category": "AI & developer tools",
+      "defaultBranch": "alpha",
+      "approxKiB": 111074,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/plugin-anthropic"
+    },
+    {
+      "repo": "dutchiono/plugin-discord",
+      "category": "AI & developer tools",
+      "defaultBranch": "alpha",
+      "approxKiB": 1895,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/plugin-discord"
+    },
+    {
+      "repo": "dutchiono/plugin-google-genai",
+      "category": "AI & developer tools",
+      "defaultBranch": "alpha",
+      "approxKiB": 270,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/plugin-google-genai"
+    },
+    {
+      "repo": "dutchiono/plugin-ollama",
+      "category": "AI & developer tools",
+      "defaultBranch": "alpha",
+      "approxKiB": 241,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/plugin-ollama"
+    },
+    {
+      "repo": "dutchiono/plugin-personality",
+      "category": "AI & developer tools",
+      "defaultBranch": "alpha",
+      "approxKiB": 138,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/plugin-personality"
+    },
+    {
+      "repo": "dutchiono/plugin-plugin-manager",
+      "category": "AI & developer tools",
+      "defaultBranch": "alpha",
+      "approxKiB": 299,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/plugin-plugin-manager"
+    },
+    {
+      "repo": "dutchiono/plugin-ruby",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 125,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/plugin-ruby"
+    },
+    {
+      "repo": "dutchiono/plugin-telegram",
+      "category": "AI & developer tools",
+      "defaultBranch": "alpha",
+      "approxKiB": 290,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/plugin-telegram"
+    },
+    {
+      "repo": "dutchiono/plugin-toon",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 2324,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/plugin-toon"
+    },
+    {
+      "repo": "dutchiono/plugin-whatsapp",
+      "category": "AI & developer tools",
+      "defaultBranch": "alpha",
+      "approxKiB": 426,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/plugin-whatsapp"
+    },
+    {
+      "repo": "dutchiono/polymarket-edge-detector",
+      "category": "Markets & Web3",
+      "defaultBranch": "main",
+      "approxKiB": 24,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/polymarket-edge-detector"
+    },
+    {
+      "repo": "dutchiono/Pumpkincarve",
+      "category": "Interactive",
+      "defaultBranch": "main",
+      "approxKiB": 6369,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/Pumpkincarve"
+    },
+    {
+      "repo": "dutchiono/QuantMuse",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 427,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/QuantMuse"
+    },
+    {
+      "repo": "dutchiono/ruby-trivia-statement-of-work",
+      "category": "Interactive",
+      "defaultBranch": "master",
+      "approxKiB": 118,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/ruby-trivia-statement-of-work"
+    },
+    {
+      "repo": "dutchiono/shitter-bob",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 63,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/shitter-bob"
+    },
+    {
+      "repo": "dutchiono/skills",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 5913,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/skills"
+    },
+    {
+      "repo": "dutchiono/streamlit_bets",
+      "category": "Markets & Web3",
+      "defaultBranch": "master",
+      "approxKiB": 36,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/streamlit_bets"
+    },
+    {
+      "repo": "dutchiono/supa",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 127,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/supa"
+    },
+    {
+      "repo": "dutchiono/syphersearch",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 3006,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/syphersearch"
+    },
+    {
+      "repo": "dutchiono/system-architect-agents",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 7,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/system-architect-agents"
+    },
+    {
+      "repo": "dutchiono/TavernKeeper",
+      "category": "Interactive",
+      "defaultBranch": "main",
+      "approxKiB": 27578,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/TavernKeeper"
+    },
+    {
+      "repo": "dutchiono/Tic-tac-drink-a-drac",
+      "category": "Interactive",
+      "defaultBranch": "main",
+      "approxKiB": 14,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/Tic-tac-drink-a-drac"
+    },
+    {
+      "repo": "dutchiono/TinyFrens",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 4266,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/TinyFrens"
+    },
+    {
+      "repo": "dutchiono/toon",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 1917,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/toon"
+    },
+    {
+      "repo": "dutchiono/trading-battleplans",
+      "category": "Markets & Web3",
+      "defaultBranch": "main",
+      "approxKiB": 179,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/trading-battleplans"
+    },
+    {
+      "repo": "dutchiono/uniphimedia",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 843,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/uniphimedia"
+    },
+    {
+      "repo": "dutchiono/v4-kite-fighting-game",
+      "category": "Interactive",
+      "defaultBranch": "master",
+      "approxKiB": 99,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/v4-kite-fighting-game"
+    },
+    {
+      "repo": "dutchiono/verse",
+      "category": "Other / needs review",
+      "defaultBranch": "master",
+      "approxKiB": 255,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/verse"
+    },
+    {
+      "repo": "dutchiono/viberun",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 66,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/dutchiono/viberun"
+    },
+    {
+      "repo": "milady-ai/.github",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 32,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/milady-ai/.github"
+    },
+    {
+      "repo": "milady-ai/ai.milady.Milaidy",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 5,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/milady-ai/ai.milady.Milaidy"
+    },
+    {
+      "repo": "milady-ai/apt",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 4,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/milady-ai/apt"
+    },
+    {
+      "repo": "milady-ai/avatars",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 392217,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/milady-ai/avatars"
+    },
+    {
+      "repo": "milady-ai/brandkit",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 397,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/milady-ai/brandkit"
+    },
+    {
+      "repo": "milady-ai/flathub",
+      "category": "Other / needs review",
+      "defaultBranch": "master",
+      "approxKiB": 561,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/milady-ai/flathub"
+    },
+    {
+      "repo": "milady-ai/homebrew-tap",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 5,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/milady-ai/homebrew-tap"
+    },
+    {
+      "repo": "milady-ai/milady",
+      "category": "AI & developer tools",
+      "defaultBranch": "develop",
+      "approxKiB": 1136207,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/milady-ai/milady"
+    },
+    {
+      "repo": "milady-ai/milady-workspace",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 74,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/milady-ai/milady-workspace"
+    },
+    {
+      "repo": "milady-ai/plugin-bsc-memes",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 19,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/milady-ai/plugin-bsc-memes"
+    },
+    {
+      "repo": "milady-ai/plugin-openrouter",
+      "category": "AI & developer tools",
+      "defaultBranch": "alpha",
+      "approxKiB": 2858,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/milady-ai/plugin-openrouter"
+    },
+    {
+      "repo": "milady-ai/plugin-roles",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 57,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/milady-ai/plugin-roles"
+    },
+    {
+      "repo": "milady-ai/plugin-vincent",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 69,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/milady-ai/plugin-vincent"
+    },
+    {
+      "repo": "milady-ai/plugin-wechat",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 88,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/milady-ai/plugin-wechat"
+    },
+    {
+      "repo": "milady-ai/signal-native",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 66,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/milady-ai/signal-native"
+    },
+    {
+      "repo": "milady-ai/skills",
+      "category": "AI & developer tools",
+      "defaultBranch": "main",
+      "approxKiB": 120,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/milady-ai/skills"
+    },
+    {
+      "repo": "milady-ai/trust-dashboard",
+      "category": "Other / needs review",
+      "defaultBranch": "main",
+      "approxKiB": 32045,
+      "review": "metadata only",
+      "decision": "not evaluated",
+      "url": "https://github.com/milady-ai/trust-dashboard"
+    }
+  ]
+}
